@@ -1,0 +1,69 @@
+---
+title: "Resume"
+author: "Candice Weber"
+date: 09/03/2024
+output: html_document
+---
+
+8156 Varina Road, Richmond, VA 23231\
+p: (804) 298-4451\
+e: candiceweber7@gmail.com\
+w: [www.linkedin.com/in/candice-weber-23085026b](https://www.linkedin.com/in/candice-weber-23085026b)
+
+### Career Objective (Abstract)
+
+Accomplished professional seeking to join 14 years of grant administration, training, and process improvement experience with newly acquired data analytics and visualization skills in support of environmental research and conservation.
+
+### Education
+
+M.Envs., Environmental Studies\
+Virginia Commonwealth University\
+*Expected graduation:* 2026\
+\
+M.A., Art History\
+University of Illinois - Chicago\
+2009 \
+\
+B.A.. Art History\
+Webster University\
+2005\
+
+### Skills
+
+- Excel
+- Tableau (basic)
+- R (basic)
+- Federal award management
+- Leadership and mentoring
+- Hands-on training
+- Developing presentations, SOPs, and other forms of process documentation
+
+### Professional Experience
+
+#### Virginia Commonwealth University, Richmond, VA
+
+##### School of Medicine
+
+*Over 12 years of progressive responsibility and leadership in a growing office of research administration.  Extensive experience providing hands on training in the financial and administrative management of research.  Primary liaison with VCU School of Medicine Business Intelligence & Analytics team for research-related reporting and data visualization.*
+
+|  |  |
+|:--|:------|
+| 2023 - Present | Senior Research Administrator and Reporting Manager |
+| 2022 - 2023 | Director of Training and Compliance, Research Administration |
+| 2016 - 2022 | Associate Director of Research Administration |
+| 2013 - 2016 | Senior Research Administrator |
+| 2012 - 2013 | Research Administrator |
+
+#### Northwestern University, Evanston, IL
+
+##### College of Arts and Sciences
+
+*Provided direct pre- and post-award support to the College’s faculty and graduate students.*
+
+|  |  |
+|:-|:------|
+| 2010 - 2012 | Research Administrator |
+| 2009 - 2010 | Graduate Program Coordinator |
+| 2007 - 2009 | Graduate Program Assistant |
+
+
