@@ -1,6 +1,6 @@
 ---
-title: "Resume"
-author: "Candice Weber"
+title: "Candice Weber"
+author: "Myself"
 date: 09/03/2024
 output: html_document
 ---
