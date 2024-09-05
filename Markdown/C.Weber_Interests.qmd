@@ -24,9 +24,7 @@ I believe that our exponentially increasing ability to capture and analyze data 
 
 ## Here is an example of a negative binomial regression I completed for ENVS 343
 
-```{r}
-#| code-fold: true
-#| code-summary: "Show the code"
+```{r, echo=FALSE}
 require(tidyverse)
 require(lubridate)
 require(viridis)
