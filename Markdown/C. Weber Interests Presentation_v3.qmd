@@ -1,0 +1,109 @@
+---
+format:
+  revealjs: 
+    theme: presentation_theme.scss
+---
+
+# My Interests
+Candice Weber\
+ENVS 543
+
+---
+I've joined the Environmental Studies program because **I am interested in gaining skills for data management, analysis and presentation so that I can support environmental research, conservation and protection  efforts.**  I'm still figuring out exactly what that will look like.
+
+## Data in Environmental Studies
+I believe that our exponentially increasing ability to capture and analyze data will be critical for coming up with answers to today's and tomorrow's environmental problems.  This is why I am interested in learning data science.
+
+::: {.r-stack}
+![](Screenshot1.png){.fragment width="545" height="380"}
+
+![](Screenshot2.png){.fragment width="542" height="388"}
+
+![](Screenshot3.png){.fragment width="534" height="358"}
+:::
+
+## Here is an example of a negative binomial regression I completed for ENVS 343
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+require(tidyverse)
+require(lubridate)
+require(viridis)
+require(FSA)
+require(MASS)
+seot <- read.csv("GLBA_SEOT_forage_bouts_1993-2019.csv",
+                 stringsAsFactors = T)
+seot_prey <- read.csv("GLBA_SEOT_forage_taxonomy_1993-2019.csv",
+                      stringsAsFactors = T)
+seot$bout_date <- ymd(seot$bout_date)
+seot$year <- year(seot$bout_date)
+seot_07_or_less <- subset(seot, year <= 2007)
+seot_96_07 <- subset(seot_07_or_less, year >= 1996)
+seot_96_07$count <- rep(1, nrow(seot_96_07))
+seot_96_07 <- inner_join(seot_96_07, seot_prey,
+                          by = "preytype_cd")
+keep <- c("Bivalvia","Echinoidea","Gastropoda","Malacostraca")
+exclude_class <- c("","Ascidiacea","Asteroidea","Cephalapoda","Holothuroidea","Maxillopoda","Ophiuroidea","Phascolosomatidea","Polychaeta","Polyplacophora")
+exclude_common <- "any bony fish"
+quantity <- seot_96_07 %>% filter(!is.na(prey_qty))
+quantity <- quantity %>% filter(!is.na(dive_time))
+quantity <- quantity %>% 
+  filter(class %in% keep & !(class %in% exclude_class) & !(common_name %in% exclude_common))
+quantity$class <- droplevels(quantity$class)
+# Negative Binomial Visualization, y-axis scaled to log 10
+quantity %>% 
+  ggplot(aes(x = dive_time,
+             y = prey_qty,
+             color = class,
+             fill = class))+
+  geom_point()+
+  labs(x = "Dive Time (seconds)",
+       y = "Prey Quantity",
+       color = "Prey Type",
+       title = "Sea Otter Foraging Behavior\nDifferences between Bivalvia & Echinoidea,\nand Bivalvia & Malacostraca, found to be statistically significant\n(y-axis scaled to log 10)")+
+  geom_smooth(method = "glm.nb")+
+  guides(fill = "none")+
+  scale_color_manual(values = c("#CC79A7","#E69F00","#56B4E9","#009E73"))+
+  scale_fill_manual(values = c("#CC79A7","#E69F00","#56B4E9","#009E73"))+
+  scale_y_log10()+
+  theme_bw()
+```
+
+## And just for fun...
+
+## Virginia Geology
+<p style="font-size: 2em;">
+::: columns
+::: {.column width="35%"}
+I grew up in the middle of North America so living on a continental plate margin is exciting for me
+:::
+
+::: {.column width="62%"}
+![](OldRag.jpeg)
+This is 1 billion-year-old leucocratic, coarse grained, foliated, alkali feldspar-blue quartz granite, also known as Old Rag [(photo courtesy NPS Katy Cain)](https://commons.wikimedia.org/wiki/File:Atop_Old_Rag_Mountain_(28219264562).jpg)
+:::
+:::
+</p>
+
+
+## Virginia Geology
+
+Last year I biked and camped on the New River Trail.
+
+
+```{r}
+#| echo: false
+#| fig-height: 5
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=-80.934, lat=36.804, popup="New River Trail State Park")
+```
+
+
+## Virginia Geology
+
+Folded Cambrian sedimentary beds along the New River Trail (photo my own).\
+Someday I'd like to make a PDF guide to geologic formations along the trail for other hikers and bikers.
+<img src="IMG_1623.jpg" width="695" height="521" />
