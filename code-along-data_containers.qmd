@@ -1,0 +1,30 @@
+---
+title: "Code Along! - Data Containers"
+format: 
+  html:
+    code-tools: true
+    toc: false
+editor: source
+---
+
+## Examples
+
+This file is used for demonstrating individual examples related to this topic and is kept as a persistent record of examples provided during lectures.
+
+## The Data
+
+There are two data sets used for this example; The *iris* data set (that comes with R) and data from the following url that has some sampling site locales for a species of bark beetle, *Araptus attenuatus* (Fig. @fig-araptus) that we will be using throughout the semester.
+
+![The Sonoran desert bark beetle, *Araptus attenuatus*.](media/beetles.png){#fig-araptus}
+
+```{r}
+url <- "https://raw.githubusercontent.com/DyerlabTeaching/Data-Containers/main/data/arapat.csv"
+```
+
+## Vectors
+
+## Matrices
+
+## Lists
+
+## Data Frames
