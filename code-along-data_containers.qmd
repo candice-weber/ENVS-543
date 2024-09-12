@@ -19,12 +19,64 @@ There are two data sets used for this example; The *iris* data set (that comes w
 
 ```{r}
 url <- "https://raw.githubusercontent.com/DyerlabTeaching/Data-Containers/main/data/arapat.csv"
+beetles <- read.csv(url)
 ```
 
 ## Vectors
 
+This is some text that I wrote.
+```{r}
+data <- c(23, 42, 567, 17, 21)
+data
+sum(data)
+sqrt(data)
+
+other <- 1:5
+other
+
+data - other
+
+data -32 * 5/9 -> data
+data
+
+tempvalues <- as.character(data)
+tempvalues
+data
+```
+
 ## Matrices
+
+
+
+
 
 ## Lists
 
+```{r}
+summary(iris)
+fit <- cor.test(iris$Petal.Length, iris$Petal.Width)
+fit
+names(fit)
+```
+
+We found a significant correlation between the variables (P = `r fit$p.value`).
+
+
+
 ## Data Frames
+
+```{r}
+library(tidyverse)
+data <- read_csv(url, show_col_types = FALSE)
+summary(data)
+sites <- beetles$Stratum
+sites
+library(leaflet)
+
+
+```
+
+
+
+
+
