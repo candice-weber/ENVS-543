@@ -3,6 +3,7 @@ title: "Foraging Behaviors of *Enhydra lutris*"
 author: "Candice Weber"
 date: "2024-04-30"
 output: html_document
+output_dir: docs
 editor_options: 
   chunk_output_type: console
 ---
