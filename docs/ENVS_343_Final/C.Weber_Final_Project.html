@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Candice Weber">
+<meta name="dcterms.date" content="2024-04-30">
+
+<title>Foraging Behaviors of Enhydra lutris</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="C.Weber_Final_Project_files/libs/clipboard/clipboard.min.js"></script>
+<script src="C.Weber_Final_Project_files/libs/quarto-html/quarto.js"></script>
+<script src="C.Weber_Final_Project_files/libs/quarto-html/popper.min.js"></script>
+<script src="C.Weber_Final_Project_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="C.Weber_Final_Project_files/libs/quarto-html/anchor.min.js"></script>
+<link href="C.Weber_Final_Project_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="C.Weber_Final_Project_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="C.Weber_Final_Project_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="C.Weber_Final_Project_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="C.Weber_Final_Project_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="C.Weber_Final_Project_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="C.Weber_Final_Project_files/libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="C.Weber_Final_Project_files/libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="C.Weber_Final_Project_files/libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="C.Weber_Final_Project_files/libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="C.Weber_Final_Project_files/libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="C.Weber_Final_Project_files/libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="C.Weber_Final_Project_files/libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="C.Weber_Final_Project_files/libs/leaflet-binding-2.2.2/leaflet.js"></script>
+<script src="C.Weber_Final_Project_files/libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+<script src="C.Weber_Final_Project_files/libs/leaflet-providers-plugin-2.2.2/leaflet-providers-plugin.js"></script>
+<link href="C.Weber_Final_Project_files/libs/leaflet-minimap-3.3.1/Control.MiniMap.min.css" rel="stylesheet">
+<script src="C.Weber_Final_Project_files/libs/leaflet-minimap-3.3.1/Control.MiniMap.min.js"></script>
+<script src="C.Weber_Final_Project_files/libs/leaflet-minimap-3.3.1/Minimap-binding.js"></script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Foraging Behaviors of <em>Enhydra lutris</em></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Candice Weber </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 30, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="data-wrangling-and-explanation" class="level2">
+<h2 class="anchored" data-anchor-id="data-wrangling-and-explanation">1: Data wrangling and explanation</h2>
+<section id="project-overview" class="level3">
+<h3 class="anchored" data-anchor-id="project-overview">Project Overview<br></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="seaotter_1.jpeg" class="img-fluid figure-img" width="300"></p>
+<figcaption><a href="https://www.flickr.com/photos/slobirdr/15800171602/"><em>Photo by Flickr user Gregory “Slobirdr” Smith</em></a></figcaption>
+</figure>
+</div>
+<p><br>Once ubiquitous along the North Pacific coasts, the sea otter (<em>Enhydra lutris</em>) is one of the smallest marine mammals and serves as a keystone species in the environments it inhabits. Sea otter predation on certain sea floor organisms like sea urchins can have cascading effects on the wider ecosystem: as sea otters maintain downward pressure on sea urchin populations, healthy kelp forests are able to thrive as important CO<sub>2</sub> sequesters providing habitat and nutrients for a more diverse marine ecosystem.<sup>1</sup></p>
+<p>Sea otters were hunted to near extinction prior to the 20th century leading to their international protection in 1911 under the North Pacific Fur Seal Convention. Recovery of the species to prior population levels in their former habitats has not been immediate. Glacier Bay in southeastern Alaska is no exception though recent population growth has been significant. In 1993 the sea otter population in Glacier Bay consisted of just five animals. In 2012, that number had grown to 8,508 both from in-group reproduction and immigration of new animals.<sup>2</sup> This rapid growth has lead to a number of on-going studies to consider the effects of the sea otter’s return to the Bay. Sea otter foraging behaviors and outcomes have been observed in Glacier Bay National Park and Preserve over several consecutive days each year between 1993 and 2019 as part of the Nearshore Marine Ecosystem Research program at the USGS Alaska Science Center. The objectives of this study have been to:</p>
+<ul>
+<li>Estimate prey species composition, prey number, and prey sizes;</li>
+<li>Estimate forage dive attributes (success, dive times, surface times);</li>
+<li>Estimate energy recovery rates of foraging sea otters;</li>
+<li>Document change in sea otter diet over time.<sup>3</sup></li>
+</ul>
+<p>Shore-based observers with high power telescopes and 10X binoculars choose a focal otter and record data on a series of that otter’s dives, recording estimated age, sex, pup status, duration of each dive in seconds, and prey type/quantity/size retrieved (if dive was successful). Each observation represents one dive by a focal otter. A series of observed dives for a focal otter represents a bout and receives a unique “bout id.”</p>
+<p>With this data, I wanted to ask the following questions:</p>
+<ul>
+<li><strong>For female otters, is there an association between quantity of prey retrieved and whether or not the otter had a dependent pup?</strong> My initial prediction is that there is an association between quantity of prey retrieved and the “pup status” of a female otter but whether that is an increase in median prey quantity or a decrease, I am not sure. It’s possible that female otters with pups may take shorter dives since they leave the pup floating on the surface while they search for prey. And depending on whether or not there is a positive association between quantity of prey and duration of the dive, these shorter dives might result in less prey. However, female otters with pups are foraging not just for themselves but for their offspring as well. This might result in a greater median prey quantity retrieved.</li>
+<li><strong>Are there foraging behaviors and outcomes that can tell us about the amount of prey retrieved on a given dive? More specifically, what kind of relationship (if any) is there between the prey type and the amount of prey retrieved? And what relationship might be present between the dive duration and the amount of prey retrieved when looking at the different types of prey retrieved?</strong> My prediction is that there will be a relationship between the type of prey retrieved and how much is retrieved in a single dive. Different types of prey will have different average sizes - some bigger, some smaller - which might limit the amount of certain kinds of prey that the otter can bring up in a single dive. While I think dive time might have <em>some</em> impact on the quantity of prey retrieved, I am not sure how strong that impact will be. A longer dive could mean the otter is able to retrieve more prey during that dive but it could also mean the prey was harder to retrieve or more scarce, which would not result in more prey.</li>
+</ul>
+<p>Predictor variables examined:</p>
+<ul>
+<li>Pup status for female otters</li>
+<li>Dive time in seconds</li>
+<li>Prey class</li>
+</ul>
+<p>Response variables examined:</p>
+<ul>
+<li>Quantity of prey retrieved</li>
+</ul>
+</section>
+<section id="data-wrangling" class="level3">
+<h3 class="anchored" data-anchor-id="data-wrangling">Data Wrangling<br></h3>
+<p>A few steps of data wrangling were needed for this data before I began running statistical models. The data span the years 1993 to 2019 however, there are years-long gaps that necessitated limiting my data to the span 1996-2007 because it included consecutive years of observations. Next, I had to join the observation data with the more detailed prey type classification legend because the observation data uses three-letter abbreviations for prey type. I then created two separate data frames for use in my analysis:</p>
+<ol type="1">
+<li><p>Pup status data frame: limited to female otters only, removed rows with pup status unknown, created a column to show a simple pup status “yes / no,” and eliminated all rows with NA in the prey quantity column.</p></li>
+<li><p>Prey quantity data frame: removed all rows with NA in the prey quantity and then dive time columns, filtered prey classification to only those prey types with more than 100 observations recorded.</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># requiring packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(lubridate)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(viridis)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(sf)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(leaflet)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(gridExtra)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(FSA)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(MASS)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(AICcmodavg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reading in my data sets.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>seot <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"GLBA_SEOT_forage_bouts_1993-2019.csv"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">stringsAsFactors =</span> T)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>seot_prey <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"GLBA_SEOT_forage_taxonomy_1993-2019.csv"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">stringsAsFactors =</span> T)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding a column for just year and filtering data to consecutive set of years 1996-2007.</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>seot<span class="sc">$</span>bout_date <span class="ot">&lt;-</span> <span class="fu">ymd</span>(seot<span class="sc">$</span>bout_date)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>seot<span class="sc">$</span>year <span class="ot">&lt;-</span> <span class="fu">year</span>(seot<span class="sc">$</span>bout_date)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>seot_07_or_less <span class="ot">&lt;-</span> <span class="fu">subset</span>(seot, year <span class="sc">&lt;=</span> <span class="dv">2007</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>seot_96_07 <span class="ot">&lt;-</span> <span class="fu">subset</span>(seot_07_or_less, year <span class="sc">&gt;=</span> <span class="dv">1996</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding a count column to count the number of observations.</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>seot_96_07<span class="sc">$</span>count <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span>, <span class="fu">nrow</span>(seot_96_07))</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Merging observation data with prey type details.</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>seot_96_07 <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(seot_96_07, seot_prey,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>                          <span class="at">by =</span> <span class="st">"preytype_cd"</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a data frame for pup status analysis.</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>pup_status <span class="ot">&lt;-</span> <span class="fu">subset</span>(seot_96_07, sex_cd <span class="sc">==</span> <span class="st">"f"</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>pup_status <span class="ot">&lt;-</span> <span class="fu">subset</span>(pup_status, pupsize_cd <span class="sc">!=</span> <span class="st">"u"</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>pup_status<span class="sc">$</span>pup_yn <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(pup_status<span class="sc">$</span>pupsize_cd <span class="sc">==</span> <span class="st">"n"</span>, <span class="st">"No pup"</span>, <span class="st">"Pup"</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>pup_status <span class="ot">&lt;-</span> pup_status <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(prey_qty))</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtering to prey types with more than 100 observations.</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>keep <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Bivalvia"</span>,<span class="st">"Echinoidea"</span>,<span class="st">"Gastropoda"</span>,<span class="st">"Malacostraca"</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>exclude_class <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">""</span>,<span class="st">"Ascidiacea"</span>,<span class="st">"Asteroidea"</span>,<span class="st">"Cephalapoda"</span>,<span class="st">"Holothuroidea"</span>,<span class="st">"Maxillopoda"</span>,<span class="st">"Ophiuroidea"</span>,<span class="st">"Phascolosomatidea"</span>,<span class="st">"Polychaeta"</span>,<span class="st">"Polyplacophora"</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtering to remove a single observation with unknown character in the class column, this row causes errors when plotting.</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>exclude_common <span class="ot">&lt;-</span> <span class="st">"any bony fish"</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a data frame for prey quantity as a response to dive time and prey type analysis.</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>quantity <span class="ot">&lt;-</span> seot_96_07 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(prey_qty))</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>quantity <span class="ot">&lt;-</span> quantity <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(dive_time))</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>quantity <span class="ot">&lt;-</span> quantity <span class="sc">%&gt;%</span> </span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(class <span class="sc">%in%</span> keep <span class="sc">&amp;</span> <span class="sc">!</span>(class <span class="sc">%in%</span> exclude_class) <span class="sc">&amp;</span> <span class="sc">!</span>(common_name <span class="sc">%in%</span> exclude_common))</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>quantity<span class="sc">$</span>class <span class="ot">&lt;-</span> <span class="fu">droplevels</span>(quantity<span class="sc">$</span>class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="space-and-time-visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="space-and-time-visualizations">2: Space and Time Visualizations</h2>
+<p>This data set includes a few different spatial data elements: longitude and latitude of the observer, longitude and latitude of the focal otter, and general sea otter foraging site locations observed. While I did not end up using observation site as one of my predictor categories in the tests below, I did want to examine the distribution of these observation sites relative to each other and the surrounding area.</p>
+<p>The majority of the foraging site locations observed were clustered inside Glacier Bay itself along the coastlines and island shorelines favored by sea otters for habitat. A few of the foraging site locations observed - Port Althorp, Dundas Bay, Lemesurier Island, and Point Carolus - extended beyond the mouth of the Bay and into the Icy Strait. Researchers utilizing this sea otter forage data, along with aerial observations and benthic invertebrate counts, found that sea otter prey resources in areas of the Bay that have been occupied for a long time are being depleted. They predicted that a subsequent decline in sea otter population growth in these areas would occur. However, they also noted that large areas of Glacier Bay have yet to be colonized by sea otters.<sup>2</sup> Visualizing the location of sea otter foraging observation sites does reveal a significant portion of the Bay is yet to be observed.</p>
+<p>To consider change in the composition of the otters’ prey over time I chose to examine how the proportion of the four most frequently observed prey types - Bivalvia, Echinoidea, Malacostraca, Gastropoda - changed from year to year.</p>
+<p>Prey of the classification Bivalvia (clams, mussels, oysters, etc.) were consistently the most frequently observed sea otter prey between 1996 and 2007 by a large margin. Bivalvia consistently made up over 60% of all prey types observed. Echinoidea - sea urchins - were the second most frequently observed prey item. The proportions of each of these four prey types showed some spikes and some drops in individual years but would usually return to a fairly stable base line during this time period.</p>
+<p>What my visualization of prey type proportion change over time does show is the beginnings of a downward trend in the proportion of clam and mussel prey type (Bivalvia) beginning between 2005 and 2006. This beginning of a decline is paired with the beginnings of upward trends in the proportion of the other three prey types, in particular sea urchins (Echinoidea). These results could be explained by considering how sea otter populations changed in Glacier Bay over this same time period (from five to over 8,500 between 1993 and 2012). With sea otter population changing so significantly during this time period it may take reviewing observations beyond 2007 to truly understand whether these prey type proportions are changing as a result of sea otter predation. It is highly likely that the sea otters are having an effect on the types of prey available to them given their role as a keystone species within the environment.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mapping the location of each observation site.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>site <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Althorp"</span>,<span class="st">"Bartlett"</span>,<span class="st">"Berg"</span>,<span class="st">"Boulder"</span>,<span class="st">"Carolus"</span>,<span class="st">"Dundas"</span>,<span class="st">"Fingers"</span>,<span class="st">"Flapjack"</span>,<span class="st">"Inner Beardslee"</span>,<span class="st">"Leland"</span>,<span class="st">"Lemesurier"</span>,<span class="st">"Marbles"</span>,<span class="st">"Outer Beardslee"</span>,<span class="st">"Rush/Ripple"</span>,<span class="st">"Sandy/Sturgess"</span>,<span class="st">"Sita/Strawberry"</span>,<span class="st">"Willoughby"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>site_lat <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">58.1488</span>,<span class="fl">58.4533</span>,<span class="fl">58.5165</span>,<span class="fl">58.5686</span>,<span class="fl">58.3639</span>,<span class="fl">58.3462</span>,<span class="fl">58.5785</span>,<span class="fl">58.6153</span>,<span class="fl">58.5334</span>,<span class="fl">58.6499</span>,<span class="fl">58.2827</span>,<span class="fl">58.6567</span>,<span class="fl">58.5174</span>,<span class="fl">58.4722</span>,<span class="fl">58.7082</span>,<span class="fl">58.5209</span>,<span class="fl">58.6058</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>site_long <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">136.3391</span>,<span class="sc">-</span><span class="fl">135.9203</span>,<span class="sc">-</span><span class="fl">136.1704</span>,<span class="sc">-</span><span class="fl">135.9952</span>,<span class="sc">-</span><span class="fl">136.0529</span>,<span class="sc">-</span><span class="fl">136.3417</span>,<span class="sc">-</span><span class="fl">136.1985</span>,<span class="sc">-</span><span class="fl">136.0202</span>,<span class="sc">-</span><span class="fl">135.8666</span>,<span class="sc">-</span><span class="fl">135.9834</span>,<span class="sc">-</span><span class="fl">136.0787</span>,<span class="sc">-</span><span class="fl">136.0565</span>,<span class="sc">-</span><span class="fl">135.9486</span>,<span class="sc">-</span><span class="fl">136.0780</span>,<span class="sc">-</span><span class="fl">136.0211</span>,<span class="sc">-</span><span class="fl">136.0221</span>,<span class="sc">-</span><span class="fl">136.1533</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Click an otter to view site name"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>location <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(site, site_long, site_lat, text)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>icons_list <span class="ot">&lt;-</span> <span class="fu">icons</span>(<span class="at">iconUrl =</span> <span class="st">"otter_1f9a6.png"</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                     <span class="at">iconWidth =</span> <span class="dv">40</span>, <span class="at">iconHeight =</span> <span class="dv">40</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>location_sf <span class="ot">&lt;-</span> location <span class="sc">%&gt;%</span> </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"site_long"</span>,<span class="st">"site_lat"</span>))</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>my_pal <span class="ot">&lt;-</span> <span class="fu">colorFactor</span>(<span class="fu">viridis</span>(<span class="dv">7</span>), location_sf<span class="sc">$</span>text)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>(<span class="at">data =</span> location_sf) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addProviderTiles</span>(providers<span class="sc">$</span>Esri.WorldTopoMap) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">data =</span> location_sf, <span class="at">icon =</span> icons_list, <span class="at">popup =</span> site) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMiniMap</span>(<span class="at">width =</span> <span class="dv">150</span>, <span class="at">height =</span> <span class="dv">150</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addLegend</span>(<span class="at">data =</span> location_sf,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="st">"topright"</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>            <span class="at">pal =</span> my_pal, <span class="at">values =</span> <span class="sc">~</span>text,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>            <span class="at">title =</span> <span class="st">"Observation Sites"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>            <span class="at">opacity =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-04375c344fe8fcef6049" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-04375c344fe8fcef6049">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldTopoMap",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[[58.1488,58.4533,58.5165,58.5686,58.3639,58.3462,58.5785,58.6153,58.5334,58.6499,58.2827,58.6567,58.5174,58.4722,58.7082,58.5209,58.6058],[-136.3391,-135.9203,-136.1704,-135.9952,-136.0529,-136.3417,-136.1985,-136.0202,-135.8666,-135.9834,-136.0787,-136.0565,-135.9486,-136.078,-136.0211,-136.0221,-136.1533],{"iconUrl":{"data":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAYAAACLz2ctAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiNjRkMzAzMi1kZTc2LTE2NDktOGRhOS0zNmExZmM2Y2U4YTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0Y5RTYyQjk5MkJDMTFFOUFCMDE4QjFDNDMyNzZFQUYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0Y5RTYyQjg5MkJDMTFFOUFCMDE4QjFDNDMyNzZFQUYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ZWVkMDczMjAtNTBiNy00MjA0LWJmYWEtMTIwNGNkM2NjMDU2IiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6YzdhYjhjOWMtZDU5My1mOTRiLWJmYTUtMzc0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","index":0},"iconWidth":40,"iconHeight":40},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Althorp","Bartlett","Berg","Boulder","Carolus","Dundas","Fingers","Flapjack","Inner Beardslee","Leland","Lemesurier","Marbles","Outer Beardslee","Rush/Ripple","Sandy/Sturgess","Sita/Strawberry","Willoughby"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMiniMap","args":[null,null,"bottomright",150,150,19,19,-5,false,false,false,false,false,false,{"color":"#ff7800","weight":1,"clickable":false},{"color":"#000000","weight":1,"clickable":false,"opacity":0,"fillOpacity":0},{"hideText":"Hide MiniMap","showText":"Show MiniMap"},[]]},{"method":"addLegend","args":[{"colors":["#21908C"],"labels":["Click an otter to view site name"],"na_color":null,"na_label":"NA","opacity":1,"position":"topright","type":"factor","title":"Observation Sites","extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[58.1488,58.7082],"lng":[-136.3417,-135.8666]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a data frame that summarizes the ratio (as a percent of the whole) of each dominant prey type (n &gt; 100) to examine change over time. </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>prey_totals <span class="ot">&lt;-</span> seot_96_07 <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, class) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">tally_preytype =</span> <span class="fu">sum</span>(count))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>year_totals <span class="ot">&lt;-</span> prey_totals <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">year_total =</span> <span class="fu">sum</span>(tally_preytype))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>prey_ratios <span class="ot">&lt;-</span> <span class="fu">full_join</span>(prey_totals, year_totals,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                         <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"year"</span>))</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>prey_ratios<span class="sc">$</span>ratio <span class="ot">&lt;-</span> (prey_ratios<span class="sc">$</span>tally_preytype <span class="sc">/</span> prey_ratios<span class="sc">$</span>year_total) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>prey_ratios <span class="ot">&lt;-</span> prey_ratios <span class="sc">%&gt;%</span> </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(class <span class="sc">%in%</span> keep <span class="sc">&amp;</span> <span class="sc">!</span>(class <span class="sc">%in%</span> exclude_class))</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>prey_ratios<span class="sc">$</span>class <span class="ot">&lt;-</span> <span class="fu">droplevels</span>(prey_ratios<span class="sc">$</span>class)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Converting year back to a date format.</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>prey_ratios<span class="sc">$</span>day <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>prey_ratios<span class="sc">$</span>month <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>prey_ratios<span class="sc">$</span>year_plot <span class="ot">&lt;-</span><span class="fu">ymd</span>(<span class="fu">paste</span>(prey_ratios<span class="sc">$</span>year, prey_ratios<span class="sc">$</span>month, </span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                                  prey_ratios<span class="sc">$</span>day, <span class="at">sep=</span><span class="st">"-"</span>))</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>prey_ratios <span class="sc">%&gt;%</span>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year_plot,</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>                            <span class="at">y =</span> ratio,</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>                            <span class="at">col =</span> class))<span class="sc">+</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Ratio (%)"</span>,</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Prey Type by Class, 1996-2007"</span>,</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="st">"Prey Type Class"</span>)<span class="sc">+</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#CC79A7"</span>,<span class="st">"#E69F00"</span>,<span class="st">"#56B4E9"</span>,<span class="st">"#009E73"</span>))<span class="sc">+</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Project_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="diagnostic-plots-and-data-scaling" class="level2">
+<h2 class="anchored" data-anchor-id="diagnostic-plots-and-data-scaling">3: Diagnostic plots and data scaling</h2>
+<p>To examine some of the foraging behaviors and prey characteristics of the Glacier Bay otters I have selected three tests.</p>
+<p>For the analysis of prey quantity and pup status, the distribution of my response variable (quantity of prey retrieved per dive) is not normal. Attempts to scale my data did not improve the normality of the distribution of this variable. The variance between my two categories - “no pup” and “pup” status - is not equal. The means are not aligned and there are several outliers beyond the 3rd quartile of the “pup” status data. Therefore I have chosen a non-parametric <strong>Wilcoxon test</strong> to look for any association between prey quantity retrieved and pup status.</p>
+<p>For the analysis of quantity of prey retrieved and prey type, my predictor variable is categorical with more than two categories and my response variable is numeric. As noted above, my response variable does not have a normal distribution. The variance of my prey type predictor categories is not equal. Therefore I have chosen a <strong>Kruskal-Wallis rank sum test</strong> and <strong>Dunn post-hoc test</strong> to determine if at least one prey type’s median quantity retrieved is different from the overall median when taking into account the rank of observations within categories.</p>
+<p>For the analysis of quantity of prey retrieved with dive time and prey type together, I have chosen to perform a regression model. My numeric predictor variable of dive time seconds is pretty normal. However, my numeric response variable of prey quantity is not normal and more importantly, it is a <strong>count</strong> (the observers recorded the count of prey retrieved by the otter in each dive). This is why I have chosen to perform a generalized linear model rather than a median-based regression model. The mean of my response variable (mean = 2.342) is less than the variance (variance = 5.768) which means my data has over-dispersion as is common with real world observational count data. Therefore I have specifically chosen to perform a <strong>negative binomial regression model</strong> to test whether there is a relationship between the duration of a dive and the number of prey retrieved and whether the y-intercepts of the different prey types differ from one another.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Wilcoxon Test</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking for normal distribution of response variable.</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>pup_status <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> prey_qty))<span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">25</span>, <span class="at">fill =</span> <span class="st">"#3399FF"</span>, <span class="at">color =</span> <span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Prey Quantity"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Distribution is not normal"</span>)<span class="sc">+</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Project_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking for comparable variance between predictor categories.</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>pup_status <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> pup_yn,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y =</span> prey_qty,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill =</span> pup_yn))<span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()<span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Pup Status"</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Prey Quantity"</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Variance is not equal"</span>)<span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#33FFFF"</span>,<span class="st">"#669900"</span>))<span class="sc">+</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>)<span class="sc">+</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Project_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Kruskal-Wallis Test</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking comparable variance of categorical predictor.</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>quantity <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> class,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>                   <span class="at">y =</span> prey_qty,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">fill =</span> class))<span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()<span class="sc">+</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Prey Classification"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Prey Quantity"</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Variance is not equal"</span>)<span class="sc">+</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>)<span class="sc">+</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>                                   <span class="at">hjust =</span> <span class="dv">1</span>))<span class="sc">+</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#CC79A7"</span>,<span class="st">"#E69F00"</span>,<span class="st">"#56B4E9"</span>,<span class="st">"#009E73"</span>))<span class="sc">+</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Project_files/figure-html/unnamed-chunk-4-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Linear Regression</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking assumptions for regression model.</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>hist1 <span class="ot">&lt;-</span> quantity <span class="sc">%&gt;%</span> </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> dive_time))<span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">20</span>, <span class="at">fill=</span><span class="st">"#66CC00"</span>, <span class="at">color =</span> <span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Pretty normal"</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Dive Time (seconds)"</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)<span class="sc">+</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>hist2 <span class="ot">&lt;-</span> quantity <span class="sc">%&gt;%</span> </span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> prey_qty))<span class="sc">+</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">20</span>, <span class="at">fill =</span> <span class="st">"#3399FF"</span>, <span class="at">color =</span> <span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Not normal"</span>,</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Prey Quantity"</span>,</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)<span class="sc">+</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>linearity1 <span class="ot">&lt;-</span> quantity <span class="sc">%&gt;%</span> </span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> dive_time,</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> prey_qty))<span class="sc">+</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>))<span class="sc">+</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Roughly linear"</span>,</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Dive Time (seconds)"</span>,</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Prey Quantity"</span>)<span class="sc">+</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">alpha =</span> <span class="st">"none"</span>)<span class="sc">+</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(hist1, hist2, linearity1, <span class="at">nrow =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Project_files/figure-html/unnamed-chunk-4-4.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="analysis-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-visualization">4: Analysis &amp; visualization</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Wilcoxon Test</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>pup_wilcox <span class="ot">&lt;-</span> <span class="fu">wilcox.test</span>(<span class="at">formula =</span> prey_qty <span class="sc">~</span> pup_yn,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">data =</span> pup_status)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>pup_wilcox</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Wilcoxon rank sum test with continuity correction
+
+data:  prey_qty by pup_yn
+W = 1264902, p-value = 0.0001681
+alternative hypothesis: true location shift is not equal to 0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>pup_wilcoxtable <span class="ot">&lt;-</span> pup_status <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pup_yn) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">N =</span> <span class="fu">length</span>(prey_qty),</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">Median =</span> <span class="fu">median</span>(prey_qty),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">Min =</span> <span class="fu">min</span>(prey_qty),</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">Max =</span> <span class="fu">max</span>(prey_qty))</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>pup_wilcoxtable</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  pup_yn     N Median   Min   Max
+  &lt;chr&gt;  &lt;int&gt;  &lt;dbl&gt; &lt;int&gt; &lt;int&gt;
+1 No pup  1155      1     1    16
+2 Pup     2364      2     1    24</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Kruskal-Wallis Test and Dunn Post-Hoc Test</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>typeprey_kw <span class="ot">&lt;-</span> <span class="fu">kruskal.test</span>(<span class="at">formula =</span> prey_qty <span class="sc">~</span> class,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">data =</span> quantity)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>typeprey_kw</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Kruskal-Wallis rank sum test
+
+data:  prey_qty by class
+Kruskal-Wallis chi-squared = 870.14, df = 3, p-value &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>typeprey_kwtable <span class="ot">&lt;-</span> quantity <span class="sc">%&gt;%</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(class) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">N =</span> <span class="fu">length</span>(prey_qty),</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">Median =</span> <span class="fu">median</span>(prey_qty),</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">Min =</span> <span class="fu">min</span>(prey_qty),</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">Max =</span> <span class="fu">max</span>(prey_qty))</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>typeprey_kwtable</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+  class            N Median   Min   Max
+  &lt;fct&gt;        &lt;int&gt;  &lt;dbl&gt; &lt;int&gt; &lt;int&gt;
+1 Bivalvia      5435      1     1    24
+2 Echinoidea     973      4     1    52
+3 Gastropoda     124      2     1    11
+4 Malacostraca   275      1     1     7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>typeprey_dunn <span class="ot">&lt;-</span> <span class="fu">dunnTest</span>(prey_qty <span class="sc">~</span> class,</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> quantity)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>typeprey_dunn_ordered <span class="ot">&lt;-</span> typeprey_dunn<span class="sc">$</span>res[<span class="fu">order</span>(typeprey_dunn<span class="sc">$</span>res<span class="sc">$</span>P.adj),]</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>typeprey_dunn_ordered</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                 Comparison          Z       P.unadj         P.adj
+1     Bivalvia - Echinoidea -27.367835 6.625041e-165 3.975025e-164
+5 Echinoidea - Malacostraca  21.722814 1.248911e-104 6.244555e-104
+4   Bivalvia - Malacostraca   8.588842  8.785047e-18  3.514019e-17
+3   Echinoidea - Gastropoda   7.910524  2.563083e-15  7.689248e-15
+6 Gastropoda - Malacostraca   6.741660  1.565868e-11  3.131737e-11
+2     Bivalvia - Gastropoda  -2.184306  2.893979e-02  2.893979e-02</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Negative Binomial Regression Model</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>model_0 <span class="ot">&lt;-</span> <span class="fu">glm.nb</span>(prey_qty <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> quantity)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>model_1 <span class="ot">&lt;-</span> <span class="fu">glm.nb</span>(prey_qty <span class="sc">~</span> dive_time, <span class="at">data =</span> quantity)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>model_2 <span class="ot">&lt;-</span> <span class="fu">glm.nb</span>(prey_qty <span class="sc">~</span> dive_time <span class="sc">+</span> class, <span class="at">data =</span> quantity)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>model_3 <span class="ot">&lt;-</span> <span class="fu">glm.nb</span>(prey_qty <span class="sc">~</span> dive_time <span class="sc">+</span> class <span class="sc">+</span> dive_time <span class="sc">*</span> class, <span class="at">data =</span> quantity)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>my_aic <span class="ot">&lt;-</span> <span class="fu">aictab</span>(<span class="at">cand.set =</span> <span class="fu">list</span>(model_0,model_1,model_2,model_3),</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">modnames =</span> <span class="fu">c</span>(<span class="st">"Null"</span>,<span class="st">"Qty~DiveX"</span>,<span class="st">"Qty~DiveX+Class"</span>,<span class="st">"Qty~DiveX*Class"</span>))</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>my_aic</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Model selection based on AICc:
+
+                K     AICc Delta_AICc AICcWt Cum.Wt        LL
+Qty~DiveX*Class 9 24467.24       0.00      1      1 -12224.61
+Qty~DiveX+Class 6 24628.42     161.18      0      1 -12308.20
+Qty~DiveX       3 25890.17    1422.93      0      1 -12942.08
+Null            2 25909.43    1442.19      0      1 -12952.71</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm.nb(formula = prey_qty ~ dive_time + class + dive_time * class, 
+    data = quantity, init.theta = 6.107478647, link = log)
+
+Coefficients:
+                              Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)                  0.3218767  0.0280533  11.474  &lt; 2e-16 ***
+dive_time                    0.0052292  0.0003536  14.789  &lt; 2e-16 ***
+classEchinoidea              1.4034220  0.0508875  27.579  &lt; 2e-16 ***
+classGastropoda              0.1301340  0.1823840   0.714    0.476    
+classMalacostraca            0.0459689  0.1240017   0.371    0.711    
+dive_time:classEchinoidea   -0.0088416  0.0007053 -12.536  &lt; 2e-16 ***
+dive_time:classGastropoda   -0.0012522  0.0015290  -0.819    0.413    
+dive_time:classMalacostraca -0.0065608  0.0014130  -4.643 3.43e-06 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for Negative Binomial(6.1075) family taken to be 1)
+
+    Null deviance: 6799.6  on 6806  degrees of freedom
+Residual deviance: 5212.6  on 6799  degrees of freedom
+AIC: 24467
+
+Number of Fisher Scoring iterations: 1
+
+              Theta:  6.107 
+          Std. Err.:  0.301 
+
+ 2 x log-likelihood:  -24449.210 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>quantity <span class="sc">%&gt;%</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> dive_time,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> prey_qty,</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> class,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">fill =</span> class))<span class="sc">+</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Dive Time (seconds)"</span>,</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Prey Quantity"</span>,</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Prey Type"</span>,</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Differences between Bivalvia &amp; Echinoidea,</span><span class="sc">\n</span><span class="st">and Bivalvia &amp; Malacostraca, found to be statistically significant"</span>)<span class="sc">+</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"glm.nb"</span>)<span class="sc">+</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>)<span class="sc">+</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#CC79A7"</span>,<span class="st">"#E69F00"</span>,<span class="st">"#56B4E9"</span>,<span class="st">"#009E73"</span>))<span class="sc">+</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#CC79A7"</span>,<span class="st">"#E69F00"</span>,<span class="st">"#56B4E9"</span>,<span class="st">"#009E73"</span>))<span class="sc">+</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Project_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Negative Binomial Visualization, y-axis scaled to log 10</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>quantity <span class="sc">%&gt;%</span> </span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> dive_time,</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> prey_qty,</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> class,</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">fill =</span> class))<span class="sc">+</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Dive Time (seconds)"</span>,</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Prey Quantity"</span>,</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Prey Type"</span>,</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Differences between Bivalvia &amp; Echinoidea,</span><span class="sc">\n</span><span class="st">and Bivalvia &amp; Malacostraca, found to be statistically significant</span><span class="sc">\n</span><span class="st">(y-axis scaled to log 10)"</span>)<span class="sc">+</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"glm.nb"</span>)<span class="sc">+</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>)<span class="sc">+</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#CC79A7"</span>,<span class="st">"#E69F00"</span>,<span class="st">"#56B4E9"</span>,<span class="st">"#009E73"</span>))<span class="sc">+</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#CC79A7"</span>,<span class="st">"#E69F00"</span>,<span class="st">"#56B4E9"</span>,<span class="st">"#009E73"</span>))<span class="sc">+</span></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_log10</span>()<span class="sc">+</span></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Project_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation">5: Interpretation</h2>
+<section id="wilcoxon-test" class="level3">
+<h3 class="anchored" data-anchor-id="wilcoxon-test">Wilcoxon Test</h3>
+<p>H<sub>0</sub>: The median prey quantity does not differ between female otters with a pup present and female otters without a pup present.</p>
+<p>H<sub>A</sub>: The median prey quantity does differ between female otters with a pup present and female otters without a pup present.</p>
+<p>The Wilcoxon/Mann-Whitney test gave a p-value of 0.0001 (W = 1264902), and as such, I reject the null hypothesis that the median prey quantity does not significantly differ between female otters with or without a pup present. There were n = 2,364 observed dives where female otters had a pup present and n = 1,155 observed dives where female otters did not have a pup present. For female otters with pups the median prey quantity per dive was 2 (min = 1, max = 24), and for female otters with no pups the median prey quantity per dive was 1 (min = 1, max = 16). The results of this test did reinforce my initial speculation that there is an association between pup status and prey quantity. Calorie intake for a nursing mother or for a mother trying to keep two mouths fed would likely need to be higher than that of a solo female otter. Some potential short-comings of this test, however, are the large difference in sample size between the two categories. Nearly twice as many female otters were observed with pups than without pups. In addition, the response variable of prey quantity is not normally distributed. While the use of a non-parametric test will help to mitigate the impact of the non-normal response variable distribution, it could still have an impact on the results of this test.</p>
+<p>Future directions for this research question could be considering whether the median prey quantity does or does not differ depending on the observed size of the pup (recorded as small, medium, or large in this data), or whether the type of prey retrieved by the female otter differs depending on whether they have a pup with them or not.</p>
+</section>
+<section id="kruskal-wallis-and-dunn-post-hoc-test" class="level3">
+<h3 class="anchored" data-anchor-id="kruskal-wallis-and-dunn-post-hoc-test">Kruskal-Wallis and Dunn Post-Hoc Test</h3>
+<p>H<sub>0</sub>: The median prey quantity does not differ between the different prey classification types.</p>
+<p>H<sub>A</sub>: The median prey quantity does differ between the different prey classification types.</p>
+<p>The Kruskal-Wallis test gave a p-value &lt;&lt; 0.001 (χ<sup>2</sup> = 870.14, df = 3), and as such, I reject the null hypothesis that the median prey quantity does not significantly differ between the different prey classification types. There is a difference between the median prey quantities of the different prey classification types.</p>
+<p>A Dunn post-hoc test showed that when considering the differences between individual prey classification types, there is a significant difference between the medians of <strong>all</strong> prey types. The greatest significance was found between Bivalvia (n = 5,435, median = 1, min = 1, max = 24) and Echinoidea (n = 973, median = 4, min = 1, max = 52) prey types (p &lt;&lt; 0.001). The next greatest significance was found between Echinoidea and Malacostraca (n = 275, median = 1, min = 1, max = 7) prey types (p &lt;&lt;&lt; 0.001). The prey types Bivalvia and Gastropoda (n = 124, median = 1, min = 1, max = 11) showed the least amount of significant difference in their medians (p &lt;&lt; 0.001).</p>
+<p>Prey of the class Bivalvia - clams and mussels - have hard outer shells that the otter must remove before consuming. Sea otters will often use a rock placed on their chest or rocks on the shore as an anvil to pound the prey against so they can remove the shell. Needing to perform this extra step before consuming - and needing a place to store that rock like in the “pocket” of skin under their arms or to use rocks on the shore - might limit the amount of prey they are able to bring up from a dive. This may be a reason why test results show a significant difference in prey quantity between prey like clams and mussels, and prey like sea urchins (Echinoidea) that they are able to just tear right into, no tools needed. Another reason for the significant difference between Bivalvia and Echinoidea prey quantities could be certain characteristics of the types of species prevalent in Glacier Bay. The Bivalvia species in this area may be larger, on average, and this might limit the number that can be retrieved in a single dive. Some potential short-comings of this test could be the lack of normality in the distribution of the prey quantity response variable and the significant difference in sample size between Bivalvia (n = 5,435) and all other prey types.</p>
+<p>Future directions for this research question could be considering what role the size of the prey plays in the quantity of prey retrieved on a dive, or whether the observation sites show differences in prey quantity. Because this data includes a record of the percent of prey not eaten by an otter (if an otter did not consume all of the prey), a future question to consider might be whether the quantity of prey retrieved is a predictor of the percentage of the prey that gets consumed.</p>
+</section>
+<section id="negative-binomial-regression-model" class="level3">
+<h3 class="anchored" data-anchor-id="negative-binomial-regression-model">Negative Binomial Regression Model</h3>
+<p>H<sub>0</sub>: There is no relationship between prey quantity retrieved and dive duration, and there is no difference in prey quantity retrieved between different prey types; dive duration does not interact with prey type to predict quantity of prey retrieved.</p>
+<p>H<sub>A</sub>: There is a relationship between prey quantity retrieved and dive duration, and there is a difference in prey quantity retrieved between different prey types; dive duration does interact with prey type to predict quantity of prey retrieved.</p>
+<p>AIC ranking identified a top model (delta AIC = 161.18): this model included prey type as an interaction with dive time. Using the model’s reported deviance values (null deviance = 6,799.6, df = 6,806; residual deviance = 5,212.6, df = 6,799) I calculated a χ<sup>2</sup> of 1,587 with 7 predictor variables degrees of freedom. Inputting these scores into a <a href="https://www.statology.org/chi-square-p-value-calculator/">Chi-Square Score to P Value Calculator</a><sup>4</sup> produces a value of p &lt;&lt; 0.001. As a result, I reject the null hypothesis that there is no relationship between prey quantity retrieved and dive duration and that dive duration does not interact with prey type to predict quantity of prey retrieved.</p>
+<p>The Bivalvia was the only prey class to show any positive relationship (slope = 0.0052, intercept = 0.322 +/- 0.0281) when interacting with dive time to predict prey quantity retrieved. Gastropoda (slope = -0.0013, intercept = 0.452 +/- 0.1824), Malacostraca (slope = -0.0066, intercept = 0.368 +/- 0.1240), and Echinoidea (slope = -0.0088, intercept = 1.725 +/- 0.0004) all showed negative relationships when interacting with dive time to predict prey quantity retrieved with Echinoidea’s relationship being the most negative of the three. Because Gastropoda’s slope of -0.0013 is so slight, and potentially because the sample size of Gastropoda observations is so small, it registers visually as positive rather than negative when plotting the regression line. It was necessary to scale the plot’s y-axis to better view the slope of each prey type.</p>
+<p>The differences between Bivalvia and Echinoidea prey types, and Bivalvia and Malacostraca prey types (both p-value &lt;&lt; 0.001) are significant. The difference between Bivalvia and Gastropoda prey types (p-value = 0.413) is not significant. While this model did produce significant results we must approach those results with caution. In this model, as the amount of time an otter spends underwater increases (range of dive times observed was between 3 and 277 seconds) more Bivalvia type prey was brought to the surface after each dive, whereas as dive time increased, the number of Echinoidea type prey the otters were able to retrieve went down. Looking at the scatter plot of prey quantity as a function of dive time, more of the Echinoidea dives where prey retrieved was greater than 3 are clustered between 0 and 100 seconds of dive time. Then the amounts of Echinoidea prey retrieved per dive sort of taper off as dive time increases. Conversely, the scatter plot does show the Bivalvia dives with prey greater than 3 appear more between ~50-150 seconds of dive time.</p>
+<p>However, the slopes for all four prey types are very slight in either direction. For every 10 second increase in dive time the amount of Bivalvia prey retrieved increased by just 0.052. For every 10 second increase in dive time the amount of Echnioidea prey retrieved decreased by just -0.088. These rates of change may not be large enough to account for any real impact of increasing dive time on prey quantity. The standard error (+/- 0.1824) of the Gastropoda prey type was the largest of the four and it produced a regression line that is difficult to interpret visually in light of its coefficients. Overall, like in our Kruskal-Wallis test above, the large disparity in sample size between the prey type predictor categories (Bivalvia n = 5,435, Gastropoda n = 124) and the lack of normal distribution in the prey quantity response variable makes it difficult to effectively use this model.</p>
+<p>For all of these research questions, an interesting future direction could be to add estimates of caloric content for each prey item and to examine closer the energy intake per dive and how this might be affected by the environment the otter is in. Digging further into the different prey types - tracking the rate of retrieval for specific species rather than entire classes of prey - might yield more interesting results, as well.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="seaotter_2.jpg" class="img-fluid figure-img" width="300"></p>
+<figcaption><a href="https://www.flickr.com/photos/16046854@N00/316194679/"><em>Photo by Flickr user joe mindluge</em></a></figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="data-citation" class="level2">
+<h2 class="anchored" data-anchor-id="data-citation">6: Data citation</h2>
+<p><strong>In Text Citations</strong></p>
+<ol type="1">
+<li><p>Womble, J. (2016, July 29) <em>A Keystone Species, the Sea Otter, Colonizes Glacier Bay</em>. National Park Service. <a href="https://www.nps.gov/glba/blogs/a-keystone-species-the-sea-otter-colonizes-glacier-bay.htm" class="uri">https://www.nps.gov/glba/blogs/a-keystone-species-the-sea-otter-colonizes-glacier-bay.htm</a>.</p></li>
+<li><p>Bodkin, J., Esslinger, G., Weitzman, B., Ballachey, B., Kloecker, K. (2016, September 13). <em>Sea Otters and Marine Communities of Glacier Bay</em>. National Park Service. <a href="https://www.nps.gov/articles/seaottersandglacierbay.htm" class="uri">https://www.nps.gov/articles/seaottersandglacierbay.htm</a>.</p></li>
+<li><p>Bodkin, J. L. 2011. <em>SOP for collecting sea otter forage data - Version 3.1: Southwest Alaska Inventory and Monitoring Network.</em> Natural Resource Report NPS/SWAN/NRR—2011/394. National Park Service, Fort Collins, Colorado.</p></li>
+<li><p>Bobbitt, Z. (2020, April 24). <em>Chi-Square Score to P Value Calculator</em>. <a href="https://www.statology.org/chi-square-p-value-calculator/" class="uri">https://www.statology.org/chi-square-p-value-calculator/</a>.</p></li>
+</ol>
+<p><strong>Otter Emoji</strong></p>
+<p><em>Otter</em> was approved as part of Unicode 12.0 in 2019 and added to Emoji 12.0 in 2019. <a href="https://emojipedia.org/emoji-12.0" class="uri">https://emojipedia.org/emoji-12.0</a>.</p>
+<p><strong>Data</strong></p>
+<p>GLBA_SEOT_forage_bouts_1993-2019.csv is data collected in Glacier Bay National Park between 1993 and 2019. These data describe observations of sea otter foraging behavior and consists of dive and surface times, success in prey retrieval, prey item, prey quantity, and size. Location of observations, and age class, sex, and pup status of the focal sea otter were also recorded.</p>
+<p>GLBA_SEOT_forage_taxonomy_1993-2019.csv is the key to abbreviations used for the prey type variable and includes common name, phylum, class, order, family, genus, scientific name, ITIS_TSN, and AphiaID.</p>
+<p>Latitude and longitude for the individual observation sites were taken from the corresponding metadata file.</p>
+<p>Kloecker, K. A., Esslinger, G. G. and Monson, D. H., 2024, <em>Glacier Bay National Park and Preserve sea otter forage data, 1993-2019: U.S. Geological Survey data release</em>, <a href="https://doi.org/10.5066/P9T6UB5G" class="uri">https://doi.org/10.5066/P9T6UB5G</a>.</p>
+<p><strong>Software</strong></p>
+<p>R Core Team (2023). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing, Vienna, Austria. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+<p>Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H (2019). “Welcome to the tidyverse.” <em>Journal of Open Source Software</em>, <em>4</em>(43), 1686. doi:10.21105/joss.01686 <a href="https://doi.org/10.21105/joss.01686" class="uri">https://doi.org/10.21105/joss.01686</a>.</p>
+<p>Garrett Grolemund, Hadley Wickham (2011). Dates and Times Made Easy with lubridate. Journal of Statistical Software, 40(3), 1-25. <a href="https://www.jstatsoft.org/v40/i03/" class="uri">https://www.jstatsoft.org/v40/i03/</a>.</p>
+<p>Simon Garnier, Noam Ross, Robert Rudis, Antônio P. Camargo, Marco Sciaini, and Cédric Scherer (2024). viridis(Lite) - Colorblind-Friendly Color Maps for R. viridis package version 0.6.5.</p>
+<p>Pebesma, E., 2018. Simple Features for R: Standardized Support for Spatial Vector Data. The R Journal 10 (1), 439-446, <a href="https://doi.org/10.32614/RJ-2018-009" class="uri">https://doi.org/10.32614/RJ-2018-009</a>.</p>
+<p>Cheng J, Schloerke B, Karambelkar B, Xie Y (2024). <em>leaflet: Create Interactive Web Maps with the JavaScript ‘Leaflet’ Library</em>. R package version 2.2.2, <a href="https://CRAN.R-project.org/package=leaflet" class="uri">https://CRAN.R-project.org/package=leaflet</a>.</p>
+<p>Auguie B (2017). <em>gridExtra: Miscellaneous Functions for “Grid” Graphics</em>. R package version 2.3, <a href="https://CRAN.R-project.org/package=gridExtra" class="uri">https://CRAN.R-project.org/package=gridExtra</a>.</p>
+<p>Ogle DH, Doll JC, Wheeler AP, Dinno A (2023). <em>FSA: Simple Fisheries Stock Assessment Methods</em>. R package version 0.9.5, <a href="https://CRAN.R-project.org/package=FSA" class="uri">https://CRAN.R-project.org/package=FSA</a>.</p>
+<p>Venables, W. N. &amp; Ripley, B. D. (2002) Modern Applied Statistics with S. Fourth Edition. Springer, New York. ISBN 0-387-95457-0</p>
+<p>Mazerolle MJ (2023). <em>AICcmodavg: Model selection and multimodel inference based on (Q)AIC(c)</em>. R package version 2.3.3, <a href="https://cran.r-project.org/package=AICcmodavg" class="uri">https://cran.r-project.org/package=AICcmodavg</a>.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
