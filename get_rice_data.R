@@ -20,10 +20,13 @@ get_rice_data <- function() {
   rice %>% 
     # Making date object
     mutate(Date = mdy_hms(DateTime, tz = "EST")) %>% 
+    
     # Converting rain inches to centimeters
     mutate(Rain_cm = Rain_in * 2.54) %>% 
+    
     # Converting H2O temp C to F
     mutate(H2O_TempF = 1.8 * H2O_TempC + 32) %>% 
+    
     # Adding Weekday and Month columns 
     mutate(Month = month(Date, label = TRUE,
                          abbr = FALSE),
@@ -31,13 +34,16 @@ get_rice_data <- function() {
            Weekday = wday(Date, label = TRUE,
                           abbr = FALSE,
                           week_start = 7)) %>% 
+    
     # Removing extraneous columns
     select(-DateTime, -PAR, -Rain_in, -H2O_TempC, -SpCond_mScm, 
            -PH_mv, -Chla_ugl, -BGAPC_CML, -BGAPC_rfu, -ODO_mgl, -Depth_ft,
            -SurfaceWaterElev_m_levelNad83m) %>% 
+    
     # Reordering columns
     select(RecordID, Date, Month, Day, Weekday, AirTempF, H2O_TempF, Rain_cm, 
            everything()) -> df
+  
   return(df)
   
 }
