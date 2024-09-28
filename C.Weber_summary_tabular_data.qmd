@@ -1,0 +1,154 @@
+---
+title: "Average Annual Phosphorus and Nitrogen Discharge to Streams in the Coterminous United States by Industry Type"
+author: "Candice Weber"
+abstract: "Table and plot summarizing the average annual phosphorus and nitrogen load to streams from 2011-2020, top five industry types by volume."
+date: today
+format: html
+---
+# Introduction
+
+
+The data that I am using for this exercise is a report of point-source phosphorus and nitrogen load discharged by registered National Pollutant Discharge Elimination System (NPDES) facilities between 1999 and 2020.  It was recently released by the USGS Idaho Water Science Center and uses the U.S. Environmental Protection Agency (EPA) Integrated Compliance Information System - Permit Compliance System (ICIS-PCS) database as its source.
+
+The data consists of identifying information for each NPDES facility and the  annual phosphorus and nitrogen discharge in kilograms.  Where measured nutrient concentration data was not available, a "typical pollutant concentration" (TPC) was derived using concentration data from the same facility but different time periods.  This data set uses the USGS [Point-Source Load Estimation Tool (PSLoadEsT)](https://www.usgs.gov/software/point-source-load-estimation-tool-psloadest) to calculate TPC where necessary.
+
+# Methods
+
+I chose to summarize this data by industry type.  I focused on the industry types with the top five total average phosphorus and nitrogen loads over all years.  I further limited my summary to the ten years between 2011 and 2020 because this time period had data for all five industry types.  
+
+Identifying the different industry types for each facility required compiling a list of Standard Industrial Classification (SIC) codes and completing two joins with the USGS data: one join to add the SIC code for each facility to the phosphorus and nitrogen load data, and another join to add the industry type based on each facility's SIC code.  I created the list of SIC codes and industry type names in a Google Sheet.  SIC codes and industry type names were taken from the [Environment, Health and Safety Online website](https://ehso.com/siccodes.php) (warning - website has many terrible ads).  This was the most complete list of SIC codes I could find.  OSHA's website only allows you to look up each code one by one using a search field.
+
+I then created a table summarizing each of the top five industry type's phosphorus and nitrogen loads in kilograms by year.  I also created a line graph showing how each industry type's average annual load changed over time.
+
+# Results
+
+```{r message = F, warning = F}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+# Pointing to list of SIC codes and their descriptors from Google Drive.  
+url <- "https://docs.google.com/spreadsheets/d/1CZ36IbC3D-GbMkWirrWxqB1hPu-y0QA0iXrwyic62pk/pub?output=csv"
+
+# Loading in USGS data sets and SIC code list.
+pyearly <- read_csv("TPyrloads.csv", show_col_types = FALSE)
+nyearly <- read_csv("TNyrloads.csv", show_col_types = FALSE)
+facilities <- read_csv("Facilities_CONUS.csv", show_col_types = FALSE)
+sic_list <- read.csv(url)
+
+# Converting the SIC code on the USGS facilities list to align with SIC code on SIC list.  The SIC codes often start with a 0 which you lose if the  data is stored as a numeric.
+facilities$sic_code <- as.character(facilities$sic_code)
+
+# Creating a data frame that adds industry type (identified by the SIC code)  to the USGS facilities list and then adds industry type to the yearly phosphorus and nitrogen data.
+fac_type <- left_join(facilities, sic_list, by = "sic_code")
+pyearly_type <- pyearly %>% 
+  left_join(fac_type %>% select(npdes, sic_code, Industry.Type), by = "npdes")
+nyearly_type <- nyearly %>% 
+  left_join(fac_type %>% select(npdes, sic_code, Industry.Type), by = "npdes")
+
+
+# Creating a data frame of the annual average for the top 5 industry types, 2011-2020 - PHOSPHORUS.
+values_to_keep <- c("4932", "5159", "1479", "3313", "2037")
+p_topfive <- pyearly_type %>% 
+  filter(sic_code %in% values_to_keep,
+         year >= 2011) %>% 
+  group_by(Industry.Type, year) %>% 
+  summarize(loadTP = round(mean(loadTP)), .groups = 'drop')
+
+# Creating a table summarizing this data.
+p_topfive_wide <- p_topfive %>% 
+  pivot_wider(names_from = Industry.Type, values_from = loadTP)
+
+p_topfive_wide$Year <- as.factor(p_topfive_wide$year)
+p_topfive_wide <- p_topfive_wide %>% select(-year) %>% 
+  relocate(Year)
+
+p_topfive_wide %>% 
+  kable(format.args = list(big.mark = ","),
+        caption = "Average Annual Point Source Phosphorus Loads to Streams (in kg), Top 5 Industry Types, 2011-2020",
+        align = "c") %>% 
+  kable_paper
+
+# Creating a line graph summarizing this data.
+p_topfive %>%  ggplot(aes(x = year, 
+                        y = loadTP,
+                        col = Industry.Type))+
+  geom_line(linewidth = 1.75)+
+  labs(x = "Year",
+       y = "Phosphorus (kg)",
+       title = "Average Annual Point Source Phosphorus Loads\nto Streams, Top 5 Industry Types, 2011-2020",
+       col = "Industry Type")+
+  scale_color_manual(values = c("#8ecae6","#219ebc","#023047","#fb6f92", "#fb8500"))+
+  scale_x_continuous(breaks = unique(p_topfive$year))+
+  theme_bw()+
+  theme(legend.position = "bottom")+
+  guides(color = guide_legend(nrow = 5, byrow = TRUE))
+
+
+# Creating a data frame of the annual average for the top 5 industry types, 2011-2020 - NITROGEN
+values_to_keep2 <- c("4932", "3471", "2911", "5159", "2823")
+n_topfive <- nyearly_type %>% 
+  filter(sic_code %in% values_to_keep2,
+         year >= 2011) %>% 
+  group_by(Industry.Type, year) %>% 
+  summarize(loadTN = round(mean(loadTN)), .groups = 'drop')
+
+# Creating a table summarizing this data.
+n_topfive_wide <- n_topfive %>% 
+  pivot_wider(names_from = Industry.Type, values_from = loadTN)
+
+n_topfive_wide$Year <- as.factor(n_topfive_wide$year)
+n_topfive_wide <- n_topfive_wide %>% select(-year) %>% 
+  relocate(Year)
+
+n_topfive_wide %>% 
+  kable(format.args = list(big.mark = ","),
+        caption = "Average Annual Point Source Nitrogen Loads to Streams (in kg), Top 5 Industry Types, 2011-2020",
+        align = "c") %>% 
+  kable_paper
+
+# Creating a line graph summarizing this data.
+n_topfive %>%  ggplot(aes(x = year, 
+                        y = loadTN,
+                        col = Industry.Type))+
+  geom_line(linewidth = 1.75)+
+  labs(x = "Year",
+       y = "Nitrogen (kg)",
+       title = "Average Annual Point Source Nitrogen Loads\nto Streams, Top 5 Industry Types, 2011-2020",
+       col = "Industry Type")+
+  scale_color_manual(values = c("#2EC4B6","#3C91E6","#023047","#fb8500", "#9FD356"))+
+  scale_x_continuous(breaks = unique(n_topfive$year))+
+  theme_bw()+
+  theme(legend.position = "bottom")+
+  guides(color = guide_legend(nrow = 5, byrow = TRUE))
+
+
+```
+
+# Citations
+
+**Data**
+
+Facilities_CONUS.csv - All major NPDES and minor wastewater facilities in the conterminous United States excluding power plants (SIC 4911) and water supply (SIC 4941).
+
+TPyrloads.csv - The calculated total phosphorus loads to streams for the specified year and NPDES facility.
+
+TNyearloads.csv - The calculated total nitrogen loads to streams for the specified year and NPDES facility.
+
+Skinner, K.D., Murray, E.M., and Murray, D.L., 2024, _Point-Source Nutrient Loads to Streams of the Conterminous United States, 1999-2020: U.S. Geological Survey data release_, <https://doi.org/10.5066/P13DL6P9>.
+
+
+**Online Resources**
+
+*The Entire SIC Code List - Free from EHSO*. Environment, Health and Safety Online. <https://www.sciencebase.gov/catalog/item/658c8545d34e3265ab1454cd>.  Accessed 27 September 2024.
+
+
+**Software**
+
+R Core Team (2023). _R: A language and environment for statistical computing_. R Foundation for Statistical Computing, Vienna, Austria. <https://www.R-project.org/>.
+
+Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H (2019). “Welcome to the tidyverse.” _Journal of Open Source Software_, *4*(43), 1686. doi:10.21105/joss.01686 <https://doi.org/10.21105/joss.01686>.
+
+Xie Y (2023). _knitr: A General-Purpose Package for Dynamic Report Generation in R_. R package version 1.45, <https://yihui.org/knitr/>.
+  
+Zhu H (2024). _kableExtra: Construct Complex Table with 'kable' and Pipe Syntax_. R package version 1.4.0, <https://CRAN.R-project.org/package=kableExtra>.
