@@ -2,11 +2,13 @@
 title: "Foraging Behaviors of *Enhydra lutris*"
 author: "Candice Weber"
 date: "2024-04-30"
-output:
-  html_document:
-    output_dir: "docs"
-editor_options: 
+format:
+  html:
+    pandoc_args: ["--footnotes"]
+output_dir: "docs"
+editor_options:
   chunk_output_type: console
+
 ---
 
 ```{r setup, include=FALSE}
@@ -19,14 +21,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![[*Photo by Flickr user Gregory "Slobirdr" Smith*](https://www.flickr.com/photos/slobirdr/15800171602/)](seaotter_1.jpeg){width=300px}
 
-<br>Once ubiquitous along the North Pacific coasts, the sea otter (*Enhydra lutris*) is one of the smallest marine mammals yet serves as a keystone species in the environments it inhabits.  Sea otter predation on certain sea floor organisms like sea urchins can have cascading effects on the wider ecosystem:  as sea otters maintain downward pressure on sea urchin populations, healthy kelp forests are able to thrive as important CO~2~ sequesters providing habitat and nutrients for a more diverse marine ecosystem.^1^
+<br>Once ubiquitous along the North Pacific coasts, the sea otter (*Enhydra lutris*) is one of the smallest marine mammals yet serves as a keystone species in the environments it inhabits.  Sea otter predation on certain sea floor organisms like sea urchins can have cascading effects on the wider ecosystem:  as sea otters maintain downward pressure on sea urchin populations, healthy kelp forests are able to thrive as important CO~2~ sequesters providing habitat and nutrients for a more diverse marine ecosystem.[^1]
 
-Sea otters were hunted to near extinction prior to the 20th century leading to their international protection in 1911 under the North Pacific Fur Seal Convention.  Recovery of the species to prior population levels in their former habitats has not been immediate.  Glacier Bay in southeastern Alaska is no exception though recent population growth has been significant.  In 1993 the sea otter population in Glacier Bay consisted of just five animals.  In 2012, that number had grown to 8,508 both from in-group reproduction and immigration of new animals.^2^  This rapid growth has lead to a number of on-going studies to consider the effects of the sea otter's return to the Bay.  Sea otter foraging behaviors and outcomes have been observed in Glacier Bay National Park and Preserve over several consecutive days each year between 1993 and 2019 as part of the Nearshore Marine Ecosystem Research program at the USGS Alaska Science Center.  The objectives of this study have been to:
+Sea otters were hunted to near extinction prior to the 20th century leading to their international protection in 1911 under the North Pacific Fur Seal Convention.  Recovery of the species to prior population levels in their former habitats has not been immediate.  Glacier Bay in southeastern Alaska is no exception though recent population growth has been significant.  In 1993 the sea otter population in Glacier Bay consisted of just five animals.  In 2012, that number had grown to 8,508 both from in-group reproduction and immigration of new animals.[^2]  This rapid growth has lead to a number of on-going studies to consider the effects of the sea otter's return to the Bay.  Sea otter foraging behaviors and outcomes have been observed in Glacier Bay National Park and Preserve over several consecutive days each year between 1993 and 2019 as part of the Nearshore Marine Ecosystem Research program at the USGS Alaska Science Center.  The objectives of this study have been to:
 
 - Estimate prey species composition, prey number, and prey sizes;
 - Estimate forage dive attributes (success, dive times, surface times);
 - Estimate energy recovery rates of foraging sea otters;
-- Document change in sea otter diet over time.^3^
+- Document change in sea otter diet over time.[^3]
 
 Shore-based observers with high power telescopes and 10X binoculars choose a focal otter and record data on a series of that otter’s dives, recording estimated age, sex, pup status, duration of each dive in seconds, and prey type/quantity/size retrieved (if dive was successful).  Each observation represents one dive by a focal otter.  A series of observed dives for a focal otter represents a bout and receives a unique “bout id.” 
 
@@ -363,7 +365,7 @@ H~0~: There is no relationship between prey quantity retrieved and dive duration
 
 H~A~: There is a relationship between prey quantity retrieved and dive duration, and there is a difference in prey quantity retrieved between different prey types; dive duration does interact with prey type to predict quantity of prey retrieved.
 
-AIC ranking identified a top model (delta AIC = 161.18): this model included prey type as an interaction with dive time.  Using the model's reported deviance values (null deviance = 6,799.6, df = 6,806; residual deviance = 5,212.6, df = 6,799) I calculated a χ^2^ of 1,587 with 7 predictor variables degrees of freedom.  Inputting these scores into a [Chi-Square Score to P Value Calculator](https://www.statology.org/chi-square-p-value-calculator/)^4^ produces a value of p << 0.001.  As a result, I reject the null hypothesis that there is no relationship between prey quantity retrieved and dive duration and that dive duration does not interact with prey type to predict quantity of prey retrieved.
+AIC ranking identified a top model (delta AIC = 161.18): this model included prey type as an interaction with dive time.  Using the model's reported deviance values (null deviance = 6,799.6, df = 6,806; residual deviance = 5,212.6, df = 6,799) I calculated a χ^2^ of 1,587 with 7 predictor variables degrees of freedom.  Inputting these scores into a [Chi-Square Score to P Value Calculator](https://www.statology.org/chi-square-p-value-calculator/)[^4] produces a value of p << 0.001.  As a result, I reject the null hypothesis that there is no relationship between prey quantity retrieved and dive duration and that dive duration does not interact with prey type to predict quantity of prey retrieved.
 
 The Bivalvia was the only prey class to show any positive relationship (slope = 0.0052, intercept = 0.322 +/- 0.0281) when interacting with dive time to predict prey quantity retrieved.  Gastropoda (slope = -0.0013, intercept = 0.452 +/- 0.1824), Malacostraca (slope = -0.0066, intercept = 0.368 +/- 0.1240), and Echinoidea (slope = -0.0088, intercept = 1.725 +/- 0.0004) all showed negative relationships when interacting with dive time to predict prey quantity retrieved with Echinoidea's relationship being the most negative of the three.  Because Gastropoda's slope of -0.0013 is so slight, and potentially because the sample size of Gastropoda observations is so small, it registers visually as positive rather than negative when plotting the regression line.  It was necessary to scale the plot's y-axis to better view the slope of each prey type.
 
@@ -377,14 +379,13 @@ For all of these research questions, an interesting future direction could be to
 
 ## 6: Data citation
 
-**In Text Citations**
+[^1]: Womble, J. (2016, July 29) *A Keystone Species, the Sea Otter, Colonizes Glacier Bay*. National Park Service. <https://www.nps.gov/glba/blogs/a-keystone-species-the-sea-otter-colonizes-glacier-bay.htm>.
 
-1. Womble, J. (2016, July 29) *A Keystone Species, the Sea Otter, Colonizes Glacier Bay*. National Park Service. <https://www.nps.gov/glba/blogs/a-keystone-species-the-sea-otter-colonizes-glacier-bay.htm>.
+[^2]: Bodkin, J., Esslinger, G., Weitzman, B., Ballachey, B., Kloecker, K.  (2016, September 13). *Sea Otters and Marine Communities of Glacier Bay*. National Park Service. <https://www.nps.gov/articles/seaottersandglacierbay.htm>.
 
-2. Bodkin, J., Esslinger, G., Weitzman, B., Ballachey, B., Kloecker, K.  (2016, September 13). *Sea Otters and Marine Communities of Glacier Bay*. National Park Service. <https://www.nps.gov/articles/seaottersandglacierbay.htm>.
+[^3]: Bodkin, J. L. 2011. *SOP for collecting sea otter forage data - Version 3.1: Southwest Alaska Inventory and Monitoring Network.* Natural Resource Report NPS/SWAN/NRR—2011/394. National Park Service, Fort Collins, Colorado.
 
-3. Bodkin, J. L. 2011. *SOP for collecting sea otter forage data - Version 3.1: Southwest Alaska Inventory and Monitoring Network.* Natural Resource Report NPS/SWAN/NRR—2011/394. National Park Service, Fort Collins, Colorado.
-4.  Bobbitt, Z. (2020, April 24). *Chi-Square Score to P Value Calculator*. <https://www.statology.org/chi-square-p-value-calculator/>.
+[^4]: Bobbitt, Z. (2020, April 24). *Chi-Square Score to P Value Calculator*. <https://www.statology.org/chi-square-p-value-calculator/>.
 
 **Otter Emoji**
 
