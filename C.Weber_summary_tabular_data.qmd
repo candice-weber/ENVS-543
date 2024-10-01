@@ -140,7 +140,7 @@ Skinner, K.D., Murray, E.M., and Murray, D.L., 2024, _Point-Source Nutrient Load
 
 **Online Resources**
 
-*The Entire SIC Code List - Free from EHSO*. Environment, Health and Safety Online. <https://www.sciencebase.gov/catalog/item/658c8545d34e3265ab1454cd>.  Accessed 27 September 2024.
+*The Entire SIC Code List - Free from EHSO*. Environment, Health and Safety Online. <https://ehso.com/siccodes.php>.  Accessed 27 September 2024.
 
 
 **Software**
