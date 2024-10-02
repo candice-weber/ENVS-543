@@ -44,6 +44,6 @@ get_rice_data <- function() {
     select(RecordID, Date, Month, Day, Weekday, AirTempF, H2O_TempF, Rain_cm, 
            everything()) -> df
   
-  return(df)
   
 }
+
