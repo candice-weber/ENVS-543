@@ -1,0 +1,175 @@
+---
+title: "Graphics"
+author: "Candice Weber"
+date: today
+abstract: "Using base R plotting and ggplot to visualize data collected at the Rice Rivers Center between January 1st, 2014, and March 27th, 2014."
+format: html
+---
+
+```{r include = FALSE}
+library(tidyverse)
+library(lubridate)
+source("get_rice_data.R")
+data <- get_rice_data()
+```
+
+### 1. Total Rain for Each Weekday in January
+
+```{r echo = FALSE}
+data %>% 
+  group_by(Weekday) %>% 
+  filter(Month == "January") %>% 
+  summarize(Rain = sum(Rain_cm)) -> question_1
+
+# Base R plot
+barplot(question_1$Rain,
+        names.arg = c("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"), 
+        cex.names = 0.8,
+        xlab = "Weekday",
+        ylab = "Rain (cm)",
+        main = "Total Rain Per Weekday in January")
+
+# Ggplot
+question_1 %>% 
+  ggplot(aes(Weekday, Rain)) +
+  geom_col() +
+  labs(y = "Rain (cm)",
+       title = "Total Rain Per Weekday in January")+
+  theme_bw()
+```
+
+### 2. Average daily temperature for weekdays in February
+
+```{r echo = FALSE}
+data %>% 
+  group_by(Weekday) %>% 
+  filter(Month == "February") %>% 
+  summarize(Temp = mean(AirTempF)) -> question_2
+
+# Base R plot
+x_labels <- c("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+plot(question_2$Temp, type = "o",
+        xlab = "Weekday",
+        ylab = "Air Temperature (°F)",
+        main = "Average Temperature Per Weekday in February",
+        ylim = c(0, max(question_2$Temp) + 3),
+        xaxt = "n")
+axis(1, at = question_2$Weekday, labels = x_labels, cex.axis = 0.8)
+
+# Ggplot
+question_2 %>% 
+  ggplot(aes(Weekday, Temp, group = 1)) +
+  geom_point() +
+  geom_line() +
+  labs(y = "Air Temperature (°F)",
+       title = "Average Temperature Per Weekday in February") +
+  ylim(0, max(question_2$Temp) + 3) +
+  theme_bw()
+```
+
+### 3. Water depth on Valentine's Day
+
+```{r echo = FALSE}
+data %>% 
+  mutate(Hour = hour(Date)) %>% 
+  group_by(Hour) %>% 
+  filter(Month == "February") %>% 
+  filter(Day == 14) -> question_3
+            
+# Base R plot
+plot(question_3$Hour, question_3$Depth_m, 
+     type = "p",
+     xlab = "15 minute sampling intervals",
+     ylab = "Depth (m)",
+     main = "Water Depth on Valentine's Day")
+
+# Ggplot
+question_3 %>% 
+  ggplot(aes(Hour,Depth_m)) +
+  geom_line() +
+  labs(x = "15 minute sampling intervals",
+       y = "Depth (m)",
+       title = "Water Depth on Valentine's Day")
+```
+
+### 4. Scatter plot of Daily Total Rain and Daily Median Temperature grouped by month (label the centroid of months)
+
+```{r echo = FALSE, message = FALSE}
+data %>% 
+  group_by(Month, Day) %>% 
+  summarize(Rain = sum(Rain_cm), Temp = median(AirTempF)) -> question_4
+
+# Base R plot
+colors <- c("January" = "blue", "February" = "red", March = "green")
+centroids <- question_4 %>%
+  group_by(Month) %>%
+  summarise(centroid_Rain = mean(Rain), centroid_Temp = mean(Temp))
+
+plot(question_4$Temp, question_4$Rain,
+     col = colors[question_4$Month], pch=19,
+     main = "Daily Median Temp and Daily Total Rain by Month with Centroids",
+     xlab = "Median Air Temperature (°F)",
+     ylab = "Total Rain (cm)")
+points(centroids$centroid_Temp, centroids$centroid_Rain, col = "black", pch = 10)
+text(centroids$centroid_Temp[1], centroids$centroid_Rain[1], 
+     labels = "January", pos = 2, col = "black")
+text(centroids$centroid_Temp[2], centroids$centroid_Rain[2], 
+     labels = "February", pos = 3, col = "black")
+text(centroids$centroid_Temp[3], centroids$centroid_Rain[3], 
+     labels = "March", pos = 4, col = "black")
+legend("topright", legend = names(colors), col = colors, pch = 19)
+
+# Ggplot
+centroids <- centroids %>%
+  mutate(vjust = case_when(
+    Month == "January" ~ -1, 
+    Month == "February" ~ 2, 
+    Month == "March" ~ -1))
+
+question_4 %>% 
+  ggplot(aes(x = Temp,
+             y = Rain,
+             col = Month)) +
+  geom_point() +
+  geom_point(data = centroids, aes(x = centroid_Temp, y = centroid_Rain), 
+             color = "black", size = 4, shape = 10) +  
+   geom_text(data = centroids, aes(x = centroid_Temp, y = centroid_Rain, label = Month), 
+            vjust = centroids$vjust, color = "black") + 
+  scale_color_manual(values = c("January" = "blue", "February" = "red", March = "green"))+
+  labs(title = "Daily Median Temp and Daily Total Rain by Month with Centroids",
+       x = "Median Air Temperature (°F)",
+       y = "Total Rain (cm)") +
+  theme_bw()
+```
+
+### 5. Wind Direction during the week containing the 8th of January
+
+```{r echo = FALSE}
+days <- c(5, 6, 7, 8, 9, 10, 11)
+data %>% 
+  filter(Month == "January") %>% 
+  filter(Day %in% days) %>% 
+  group_by(Day) %>% 
+  summarize(Mean_Wind = mean(WindDir)) %>% 
+  mutate(Day = as.factor(Day)) -> question_5
+
+# Base R plot
+barplot(question_5$Mean_Wind,
+        names.arg = c("Jan 5", "Jan 6", "Jan 7", "Jan 8", "Jan 9", "Jan 10", "Jan 11"),
+        xlab = "Day",
+        ylab = "Wind Direction (Degrees)",
+        main = "Average Wind Direction by Day\nJanuary 5th through January 11th")
+
+# Ggplot
+question_5 %>% 
+  ggplot(aes(x = Mean_Wind,
+           fill = Day))+
+  geom_histogram(bins = 36)+ 
+  labs(x = "Wind Direction (Degrees)",
+       y = NULL,
+       fill = "Day of the Month",
+       title = "Average Wind Direction by Day\nJanuary 5th through January 11th")+
+  coord_polar() +
+  theme_bw()
+```
+
