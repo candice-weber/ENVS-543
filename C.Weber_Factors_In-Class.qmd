@@ -1,0 +1,52 @@
+---
+title: "Factors In-Class Activity"
+author: "Candice Weber"
+date: today
+format: html
+---
+
+```{r message = FALSE}
+library(tidyverse)
+library(lubridate)
+library(forcats)
+library(lunar)
+source("get_rice_data.R")
+data <- get_rice_data()
+```
+
+1. Change the order of the weekdays to start with Monday,
+
+```{r}
+data$Weekday <- fct_relevel(data$Weekday, "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+levels(data$Weekday)
+```
+
+2. Add two additional factor columns.  Indicate whether the day is a weekday or a weekend.  Identify the lunar phase based on the date.
+
+```{r}
+data <- data %>% 
+  mutate(WeekdayorWeekend = case_when(
+    Weekday == "Sunday" ~ "Weekend",
+    Weekday == "Monday" ~ "Weekday",
+    Weekday == "Tuesday" ~ "Weekday",
+    Weekday == "Wednesday" ~ "Weekday",
+    Weekday == "Thursday" ~ "Weekday",
+    Weekday == "Friday" ~ "Weekday",
+    Weekday == "Saturday" ~ "Weekend"))
+data$WeekdayorWeekend <- as.factor(data$WeekdayorWeekend)
+data$Lunar <- lunar.phase(data$Date, shift = 0, name = TRUE)
+head(data$Lunar, 50)
+```
+
+3. Create a column that indicates whether the tide is coming in or going out.
+
+```{r}
+data <- data %>%
+  mutate(water_diff = Depth_m - lag(Depth_m)) %>% 
+  mutate(tide = case_when(
+    water_diff >= 0 ~ "Incoming",
+    water_diff < 0 ~ "Outgoing"))
+data$tide <- factor(data$tide)
+head(data$tide, 50)
+```
+
