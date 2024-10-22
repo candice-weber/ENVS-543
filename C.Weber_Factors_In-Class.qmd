@@ -35,6 +35,8 @@ data <- data %>%
     Weekday == "Saturday" ~ "Weekend"))
 data$WeekdayorWeekend <- as.factor(data$WeekdayorWeekend)
 data$Lunar <- lunar.phase(data$Date, shift = 0, name = TRUE)
+print(data, n = 5, width = Inf)
+head(data$WeekdayorWeekend, 50)
 head(data$Lunar, 50)
 ```
 
@@ -47,6 +49,7 @@ data <- data %>%
     water_diff >= 0 ~ "Incoming",
     water_diff < 0 ~ "Outgoing"))
 data$tide <- factor(data$tide)
+print(data, n = 5, width = Inf)
 head(data$tide, 50)
 ```
 
