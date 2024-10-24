@@ -1,0 +1,183 @@
+---
+title: "Spatial Data Assignment"
+author: "Candice Weber"
+date: today
+abstract: "An assignment to demonstrate basic understanding of spatial libraries in R."
+format: 
+  html:
+    code-tools: true
+    toc: false
+---
+
+<center>
+![*Araptus attenuatus* the enigmatic Sonoran Desert Bark Beetle.](https://live.staticflickr.com/65535/50441339417_74e04216fa_w_d.jpg)
+</center>
+
+
+This homework is a bit quick but is designed to make sure that:
+
+1. To make sure everyone can get their computer up-to-date with the proper set of libraries so that we can work with geospatial data, and
+2. Give you some practice turning normal numerical data into geospatial coordinates and performing basic operations.
+
+## Spatial Libraries
+
+The following code defines the set of necessary libraries for the next few weeks and then figures out which (potential) subset you need to install. It then installs them all in one call.  It will not load them into your session, you'll have to do that later in your code chunks.
+
+```{r message = FALSE}
+# needed_libraries <- c("sf",
+#                       "maps",
+#                       "units",
+#                       "rgdal",
+#                       "rgeos",
+#                       "GGally",
+#                       "raster",
+#                       "mapproj",
+#                       "leaflet",
+#                       "rnaturalearth",
+#                       "rnaturalearthdata"
+#                       )
+# # Determines which libraries you do not have
+# #   already installed.
+# need_inst <- setdiff( needed_libraries, 
+#                       rownames( installed.packages()) )
+# # Instrall the neccessary ones.
+# if( length( need_inst ) ) {
+#   install.packages( need_inst, dependencies = TRUE )
+# }
+
+library(maps)
+library(tidyverse)
+library(leaflet)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+```
+
+
+
+## The Data - Preprocessing
+
+The data for this is some site-level data from the Sonoran Desert bark beetle.  The URL is in the next chunk, and is currently being hosted on my class [Github repository](https://github.com/dyerlab/ENVS-Lectures).  Load it in.
+
+```{r}
+url <- "https://raw.githubusercontent.com/dyerlab/ENVS-Lectures/master/data/Araptus_Disperal_Bias.csv"
+data_spatial <- read.csv(url)
+```
+
+
+### Interactive Map
+
+Use the `leaflet` library and make an interactive map.  If you can, add a label to each marker with the ID of the site.  You can look at the provider tiles [here](https://leaflet-extras.github.io/leaflet-providers/preview/) and use on in the `addProviderTiles()` function. 
+
+There is a great tutorial [here](https://rstudio.github.io/leaflet/map_widget.html) on how to customize the leaflet display.  You may want to go look at it and see what you can use to make a better display.
+
+```{r}
+data_spatial %>%
+  mutate( Label = paste( "<b>Site:", Site) ) %>%
+  leaflet() %>%
+  addMarkers( ~Longitude, ~Latitude, popup = ~Label ) %>%
+  addProviderTiles( "OpenTopoMap" )
+```
+
+### Converting to `sf` Objects
+
+Convert the spatial data in the beetle data.frame into an `sf` object.  Make sure you set the Coordinate Reference System to $4326$.
+
+
+```{r}
+data_spatial %>%
+  st_as_sf(coords=c("Longitude","Latitude"),
+            crs = 4326) -> data_simple
+```
+
+
+### Questions
+
+For these questions, you may want to look at the `sf` cheat sheet [here](https://github.com/rstudio/cheatsheets/raw/main/sf.pdf) to find the appropriate geospatial function.
+
+1. How far apart (in km) are the sites Constitución (`const`) and San Francisquito (`sfran`)?  
+
+```{r}
+data_simple %>% 
+  filter(Site == "const" | Site == "sfran") %>% 
+  st_as_sfc(data_simple$geometry) -> distance_measure
+st_distance(distance_measure, distance_measure) / 1000
+```
+
+2. Is there a correlation between habitat suitability and the ratio of males to female beetles sampled at each locale? 
+
+As the suitability of a habitat increases, the male-to-female ratio decreases (more females present than males).
+
+```{r}
+data_simple %>% ggplot() +
+  geom_point(aes(x = Suitability,
+                 y = MFRatio))+
+  labs(x = "Suitability",
+       y = "Male-to-Female Ratio",
+       title = "Correlation of Sex Ratio and Suitability")+
+  theme_bw()
+
+cor.test(x = data_spatial$Suitability,
+         y = data_spatial$MFRatio)
+```
+
+
+3. Make a plot using `ggplot` of the data with suitability as the size of the points and the sex ratio as the fill color.
+
+```{r}
+mexico <- map_data("world", region = "mexico")
+ggplot()+
+  geom_polygon(data = mexico,
+               aes(x = long,
+                   y = lat,
+                   group = group),
+                   fill = "grey")+
+  labs(x = "Longitude",
+       y = "Latitude")+
+  guides(fill = "none")+
+  geom_sf(data = data_simple,
+             aes(size = Suitability,
+                 color = MFRatio),
+             alpha = 0.7)+
+  labs(size = "Suitability",
+       color = "Sex Ratio",
+       title = bquote("Habitat Suitability and Sex Ratio of"~italic("Araptus attenuatus")~" "))+
+  coord_sf(xlim = c(-115, -105),
+            ylim = c(20, 30))+
+  theme_bw()
+
+```
+
+
+4. Reproject the data and plot it again using an EPSG code defined for Mexico UTM zone 12N (see [epgs.io](https://epsg.io) for projections).
+
+```{r}
+data_simple %>%
+  st_transform(6367) -> data_simple_2
+
+
+world <- ne_countries(scale = "medium", returnclass = "sf") %>% 
+  st_transform(6367)
+
+ggplot()+
+  geom_sf(data = world)+
+  geom_sf(data = data_simple_2,
+             aes(size = Suitability,
+                 color = MFRatio),
+                  alpha = 0.7)+
+  labs(size = "Suitability",
+       color = "Sex Ratio",
+       title = bquote("Habitat Suitability and Sex Ratio of"~italic("Araptus attenuatus")~" "))+
+  coord_sf(xlim = c(19000, 670000),
+            ylim = c(2500000, 3300000))+
+  theme_bw()
+
+```
+
+
+
+
+
+
+
+
