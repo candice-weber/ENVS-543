@@ -1,0 +1,139 @@
+---
+title: "Raster Data Homework"
+format: html
+author: "Candice Weber"
+date: today
+abstract: "Loading, manipulating, and displaying geospatial data in a raster format."
+---
+
+## 1. Load the raster and point data in and crop to an appropriate size to display the locations of the sampling plots and make a label for each site.
+
+```{r message = FALSE, warning = FALSE}
+library(raster)
+library(tidyverse)
+library(ggrepel)
+library(sf)
+
+raster_url <- "https://github.com/DyerlabTeaching/Raster-Data/raw/main/data/alt_22.tif"
+beetle_url <- "https://raw.githubusercontent.com/DyerlabTeaching/Raster-Data/main/data/AraptusDispersalBias.csv"
+
+r <- raster(raster_url)
+beetles <- read_csv(beetle_url) 
+beetles %>%  
+  st_as_sf(coords = c("Longitude","Latitude"), crs ="4326") -> beetles_sf
+
+beetles_bbox <- c(-116, -109, 22, 30) 
+baja_extent <- extent(beetles_bbox)
+alt <- crop(r, baja_extent)
+rm(r)
+alt %>%
+  rasterToPoints() %>%
+  as.data.frame() %>% 
+  transmute(Longitude=x,
+            Latitude=y,
+            Elevation=alt_22)  -> alt.df
+alt.df %>%
+  ggplot()  + 
+  geom_raster( aes( x = Longitude, 
+                    y = Latitude, 
+                    fill = Elevation) ) + 
+  geom_sf( aes(), 
+           data = beetles_sf, 
+           color = "blue",
+           alpha = 0.75)+
+  geom_text_repel( aes( label = Site,
+                        geometry = geometry),
+                   data = beetles_sf,
+                   stat = "sf_coordinates", 
+                   size = 4, 
+                   color = "blue") +
+  coord_sf()+
+  scale_fill_gradientn( colors=terrain.colors(100))+
+  theme_minimal()
+```
+
+## 2. Use the click() function to crop the raster and filter the sites to include only the sampling locations that are in the Cape regions (e.g., south of site labeled #75).  Plot the raster of elevation and all cape region locales with sex-ratio represented as the size of the plot symbol.
+
+```{r}
+# plot( alt )
+# click(alt, xy=TRUE, n=4 ) -> points
+
+cape_bbox <- c(-111.4, -108, 22, 24.7)
+cape_extent <- extent(cape_bbox)
+cape_alt <- crop(alt, cape_extent)
+
+cape_alt %>%
+  rasterToPoints() %>%
+  as.data.frame() %>% 
+  transmute(Longitude=x,
+            Latitude=y,
+            Elevation=alt_22)  -> cape_alt_df
+
+cape_sites <- c("163", "153", "48", "157", "73", "Aqu")
+beetles_sf %>% 
+  filter(Site %in% cape_sites) -> cape_beetles
+
+cape_alt_df %>%
+  ggplot()  + 
+  geom_raster( aes( x = Longitude, 
+                    y = Latitude, 
+                    fill = Elevation) ) + 
+  geom_sf( aes(size = MFRatio), 
+           data = cape_beetles, 
+           color = "blue",
+           alpha = 0.75)+
+  geom_text_repel( aes( label = Site,
+                        geometry = geometry),
+                   data = cape_beetles,
+                   stat = "sf_coordinates", 
+                   size = 4, 
+                   color = "blue") +
+  coord_sf()+
+  scale_fill_gradientn( colors=terrain.colors(100))+
+  theme_bw()
+
+
+```
+
+## 3. The peninsula of Baja California is divided into the States of Baja California Norte and Baja California Sur. The border between these states is at 28° Latitude. Divide the sample locations into groups based on which state they are located in and plot the average sex ratio of the sample sites partitioned by each site.  
+
+```{r}
+beetles %>% 
+  mutate(State = case_when(
+    Latitude >= 28 ~ "Norte",
+    Latitude < 28 ~ "Sur")) -> state_beetles
+
+state_beetles %>% 
+  ggplot(aes(x = State,
+             y = MFRatio,
+             fill = State))+
+  geom_boxplot()+
+  scale_fill_manual(values = c("lightgreen", "lightblue"))+
+  labs(x = "State",
+       y = "Sex Ratio",
+       title = "Average Sex Ratio by State")+
+  guides(fill = "none")+
+  theme_minimal()
+
+```
+
+## 4. Is there a relationship between the observed sex ratio and the elevation at that site?  Plot these, and in the text, perform a correlation test (cor.test()) and report the values as if you were writing them up in a results section.
+
+```{r message = FALSE}
+elevation_values <- raster::extract(alt, as(beetles_sf, "Spatial"))
+beetles_sf$Elevation <- elevation_values
+
+beetles_sf %>% ggplot(aes(x = Elevation,
+                 y = MFRatio)) +
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE, color = "blue") + 
+  labs(x = "Elevation",
+       y = "Sex Ratio",
+       title = "Correlation of Sex Ratio and Elevation")+
+  theme_minimal()
+
+
+cor.test(x = beetles_sf$Elevation,
+         y = beetles_sf$MFRatio)
+```
+A correlation test of site elevation and site sex ratio resulted in a Pearson's correlation coefficient of -0.1033 (p = 0.5801, df = 29).  There is a slight negative correlation between site elevation and sex ratio.  As the elevation of the site increases, there is a slight decrease in the male-to-female ratio at that site.  Sites with higher elevations were found to have more females to males than sites with lower elevations.  However, the correlation is very weak and the p-value of 0.5801 is much greater than 0.05.  This means there is no significant relationship between these two values.  
