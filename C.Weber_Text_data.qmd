@@ -1,0 +1,94 @@
+---
+title: "Text Data"
+format: html
+author: "Candice Weber"
+date: today
+abstract: "Analyzing the undergraduate course offerings in VCU Life Sciences using text data wrangling methods."
+---
+
+1. A plot of the number of courses at the 100, 200, 300, and 400-level grouped by program.  
+
+```{r message = FALSE, warning = FALSE}
+library(tidyverse)
+library(readr)
+library(stringr)
+library(wordcloud)
+library(wordcloud2)
+library(tm)
+library(tidytext)
+```
+
+
+```{r warning = FALSE}
+text_data <- read_lines("LifeSciencesCurriculum.txt") # Reading in the raw text file.
+
+pattern <- "^[A-Z]{4} [0-9]{3}.+[0-9] Hour[s]?\\.$" # Creating a pattern that we can use to pull out only the lines of text that have program, course number, title, and hours.
+
+grepl(pattern, text_data) -> idx # Using logic to identify the lines in my text file that have this pattern.
+
+titles <- text_data[idx] # Extracting only the lines that have this pattern.
+
+str_split(titles, pattern = "\\.", simplify = TRUE) -> raw # Splitting the different components of the line into separate columns in a matrix.
+
+data <- data.frame(course = raw[,1],
+                   title = str_trim(raw[,2]),
+                   hours = str_trim(raw[,3])) %>% # Converting the matrix to a data frame.
+  mutate(hours = str_remove(hours, "Hour")) %>% 
+    mutate(hours = as.numeric(str_remove(hours, "s"))) %>% 
+  mutate(program = str_split(course, " ", simplify = TRUE)[,1]) %>% 
+  mutate(number = as.numeric(str_split(course, " ", simplify = TRUE)[,2])) %>% # Isolating the number of hours from the hours column and converting it to a numeric (NAs will need to be dealt with).
+  select(program, number, title, hours) # Removing the course column as it is not needed and rearranging the columns.
+
+data %>% 
+  filter(is.na(hours)) %>% 
+  mutate(dup_factor = case_when(
+    number == 292 ~ 1,
+    number == 492 & program == "ENVS" ~ 2,
+    number == 493 & program == "ENVS" ~ 2,
+    TRUE ~ 3
+  )) %>% # Assigning the number of times to duplicate each NA row depending on the number of variable hours possible for each course (1-2, 1-3, etc).
+slice(rep(1:n(), times = dup_factor)) -> duplicated_rows # Duplicating the rows that have variable hours.
+data_bound <- bind_rows(data, duplicated_rows)
+
+df <- data_bound %>%
+  group_by(program, number) %>%
+  mutate(hours = case_when(
+    is.na(hours) ~ row_number(),
+    TRUE ~ hours
+  )) %>%
+  ungroup() # Assigning the number of hours per course for those courses that were split out from 1-2, 1-3, etc.
+
+df %>% 
+  mutate(level = case_when(
+    number %/% 100 == 1 ~ "100",
+    number %/% 100 == 2 ~ "200",
+    number %/% 100 == 3 ~ "300",
+    number %/% 100 == 4 ~ "400"
+  )) -> df_plot # Adding a column that identifies the "course-level" of each course.
+
+df_plot %>%
+  ggplot(aes(x = level,
+             fill = program)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Number of courses per course-level, by program",
+       x = "Course Level",
+       y = "Count",
+       fill = "Program") +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_minimal()
+
+```
+
+2. A wordcloud based upon all course titles.  
+
+```{r message = FALSE, warning = FALSE}
+new_data <- data_frame(titles = data$title)
+new_data %>% 
+  unnest_tokens(word, titles) -> words
+words <- words %>% 
+  anti_join(stop_words)
+words %>% 
+  count(word, sort = TRUE) -> counts
+wordcloud2(counts)
+```
+
