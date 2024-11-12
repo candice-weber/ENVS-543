@@ -1,0 +1,26 @@
+---
+title: "Practing_With_Text_data"
+format: html
+---
+
+```{r message = FALSE}
+library(tidyverse)
+library(readr)
+library(stringr)
+```
+
+
+```{r}
+text_data <- read_lines("Region_1.txt") #Reading in the raw text
+
+text_df <- data_frame(text = text_data) #Converting to a data frame
+
+text_df %>% 
+  slice(356:n()) -> text_df #Extracting out just the public comment portion using slice() (n() = the total number of rows in the df, I've left it open)
+
+#Next, need to convert so it has ONE TOKEN PER DOCUMENT ROW
+
+
+
+```
+

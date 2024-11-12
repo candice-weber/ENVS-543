@@ -1,0 +1,185 @@
+---
+title: "Textual Analysis"
+format: html
+author: "Candice Weber"
+date: today
+---
+
+## Textual Data
+
+```{r}
+library(tidyverse)
+library(readr)
+library(stringr)
+
+w <- "'Coding is fun!' said Dyer."
+x <- "Rodney"
+y <- 'Dyer'
+z <- 'Bob Marley once said, "It is a foolish dog who barks at a passing bird."'
+w
+x
+y
+z
+# \ = "escaping", \n for new line, etc etc...??
+
+print(z)
+cat(z) # prints out exactly what you will see, doesn't do the "escaping" part (concatonate to the terminal)
+
+
+```
+
+## Creating Text Variables
+
+```{r}
+paste("Bob","is","not","here","man")
+paste("Bob","is","not","here","man", sep="-")
+
+paste("My favorite number is ", 42, "!", sep="")
+
+length(z)
+nchar(z)
+str_length(z)
+
+vec <- c(w,x,y,z)
+vec
+length(vec)
+str_length(vec)
+
+a <- 1:10
+paste(a)
+paste(a, collapse = ",")
+b <- LETTERS[1:10]
+b
+paste(b,a,sep="-")
+paste(a,b,collapse = "x")
+
+str_c(a)
+```
+## Finding Stuff In Strings
+
+```{r}
+z
+str_detect(z, "Marley")
+str_detect(z, "marley")
+# convert everything to lower case, then you can search and find all instances regardless of whether it was upper case or lower case
+str_detect(vec, "Dyer")
+
+
+str_count(z, "a")
+str_count(vec, "Dyer")
+
+str_locate(z, "dog")
+str_locate(vec, "a")
+str_locate_all(vec, "a")
+
+str_sub(z, 24, -2)
+c <- z
+str_sub(c, 24, -2) <- "hey"
+c
+
+str_remove(z, "dog")
+str_remove_all(z, "a")
+
+str_trunc(z, 23)
+
+str_to_lower(z)
+str_to_upper(z)
+str_to_sentence(z)
+str_to_title(z)
+
+```
+## Regular Expression
+
+- Make a graphical display of the number of courses in ENVS by course level 100, 200, etc.
+- Make a wordcloud from the titles.
+
+```{r}
+url <- "https://raw.githubusercontent.com/DyerlabTeaching/Textual-Data/refs/heads/main/data/ENVSclasses.txt?token=GHSAT0AAAAAACWO27UIA46V72P7DBZEP5EKZYZFFXQ"
+
+envs <- read_lines(url)
+head(envs,25)
+```
+```{r}
+str_detect(envs, "ENVS") -> idx
+envs[idx]
+```
+
+```{r}
+# we are looking for 4 upper clase letters, folowed up a space, followed up 3 numbers, followed by some other text, followed by a group of numbers and then "Hours.".....
+
+envs101 <- envs[1]
+envs101
+
+
+```
+
+```{r}
+# Shows us where matches are being made, see where things are at.
+str_view(envs101, "ENVS")
+str_view(envs101, "Hour")
+str_view(envs101, "n")
+
+str_view(envs101, "[:digit:]")
+str_view(envs101, "[:digit:]{3}")
+str_view(envs101, "[:digit:]{1,3}")
+str_view(envs101, "[:punct:]")
+str_view(envs101, "[:alpha:]")
+str_view(envs101, "[:lower:]")
+str_view(envs101, "[:space:]")
+str_view(envs101, "[:alpha:]{4} [:digit:]{3}")
+str_view(envs101, "[:upper:]{4} [:digit:]{3}")
+str_view(envs101, "[A-Z]{4} [0-9]{3}")
+```
+
+```{r}
+# if you want to search for expression at only the beginning of a line:
+str_view(envs101, "^[A-Z]{4} [0-9]{3}")
+# if you want to search for expression at only the end of a line:
+str_view(envs101, "[0-9] Hours.$")
+str_view(envs101, "[0-9] Hour|s.$")
+```
+
+```{r}
+# . = "stuff," .+ = "a bunch of stuff":
+str_view(envs101, "^[A-Z]{4} [0-9]{3}.+[0-9] Hour[s]?\\.$")
+# ^ that thing in the quotes is a reguler expression
+```
+```{r}
+pattern <- "^[A-Z]{4} [0-9]{3}.+[0-9] Hour[s]?\\.$"
+grepl(pattern, envs) -> idx
+titles <- envs[idx]
+titles
+```
+
+
+```{r}
+str_split(titles, pattern = "\\.", simplify = TRUE) -> raw
+data <- data.frame(course = raw[,1],
+                   title = str_trim(raw[,2]),
+                   hours = str_trim(raw[,3])) %>% 
+  mutate(hours = str_remove(hours, "Hour")) %>% 
+    mutate(hours = as.numeric(str_remove(hours, "s"))) %>% 
+  mutate(program = str_split(course, " ", simplify = TRUE)[,1]) %>% 
+  mutate(number = as.numeric(str_split(course, " ", simplify = TRUE)[,2])) %>% 
+  select(program, number ,title, hours)
+data %>% 
+  filter(is.na(hours)) %>% 
+  slice(rep(1:n(), each = 3)) -> duplicated_rows
+data <- bind_rows(data, duplicated_rows)
+data %>% 
+  group_by(number) %>% 
+  mutate(hours = ifelse(is.na(hours), seq(1:4), hours)) %>% 
+  ungroup() -> df
+
+```
+
+```{r}
+as.vector(str_split(title, " ", simplify=TRUE)
+          
+          
+data.frame(words, count = 1) %>% 
+  mutate(word = factor(words)) %>% 
+  
+
+```
+
