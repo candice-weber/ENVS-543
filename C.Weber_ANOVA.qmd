@@ -3,6 +3,7 @@ title: "Analysis of Means Assignment"
 author: "Candice Weber"
 format: html
 abstract: "Utilizing analysis of variance to understand the effects of gender and diet on weight loss."
+date: today
 
 ---
 
