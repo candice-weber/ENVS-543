@@ -1,0 +1,628 @@
+- Welcome. Good evening, everyone. We have now opened the meeting, and we wanna let you know you are in the right place
+to participate in the EPA's virtual PFAS community engagement meeting for Region 1.
+To minimize background noise for everyone, you're all muted. If you require technical or Zoom connection assistance,
+please email info@pfascommunityengagement.org.
+We have techs standing by to assist you. Today's presentation will be followed by a listening session,
+and you'll have the opportunity to provide feedback directly with us. And I think we are just after six o'clock,
+so we're ready to get started. Welcome to those of you joining us virtually via Zoom or over the phone.
+And thank you all for taking time out of your busy lives to be with us tonight. We have worked to accommodate virtual participation,
+and to provide meaningful interpretation for tonight. For those just joining us virtually, if you're having any trouble,
+again, please reach out to info@pfascommunityengagement.org.
+Now I'm going to turn it over to Grace on the next slide.
+- Before we begin today's virtual community engagement session, we'd like to take a few minutes
+to review the webinar platform. First, a reminder that today's webinar is being recorded,
+all attendees are muted and in listen-only mode until the feedback portion of this session.
+During the second half of the session, we will open it up for feedback from individuals who have signed up ahead of time to speak.
+We'll first hear from those who signed up ahead of time to share verbal feedback, and then, if time permitting,
+we'll have an opportunity for others to share comments. We'll share specific instructions
+on how you'll be able to give us feedback using your device mic during that portion of the session.
+Next slide, please. So a quick overview of Zoom controls.
+You can adjust your audio and mic settings in the lower left corner of the Zoom navigation bar.
+You'll use the raise hand function, if we have time at the end of the session, for additional public feedback.
+Click show captions to turn on English close-captioning, and you can select what language
+you want your audio in using the interpretation button. Next slide.
+There is an English and Spanish audio stream available for this session. To access the translated stream,
+you must listen via online audio in Zoom, not via the call-in number.
+Please click the interpretation icon on the navigation bar in the lower part of the Zoom window
+to access your translation options. Select your preferred language, either English or Spanish.
+If you are listening in Spanish, it is recommended to mute original audio. This option is also located in the translation button.
+And next slide. And just one more time,
+if you need technical assistance with the Zoom platform, please email info@pfascommunityengagement.org
+and we can assist you. So I will turn it back over to Kelsey at this time.
+- Thank you, Grace. So before we begin, I just wanna highlight that by participating in today's online event,
+you acknowledge and consent that your name, video, image, or phone number may be visible to others
+in the live meeting, as well as captured in the recording. Next slide.
+Thank you again for joining us tonight. As you know, tonight, we're gonna focus on a class of chemicals known as PFAS,
+and we plan to both describe some work EPA, the US Environmental Protection Agency,
+is doing on these chemicals, and then to hear from many of you. So before we begin, I just wanna share a bit about myself.
+I'll be your moderator for today's session. My name is Kelsey Dumville, and I work for EPA Region 1
+as a Community Involvement Coordinator. I've worked in our Office of Public Affairs here in Region 1 one for 15 years.
+It's been my job - It will be my job tonight to keep our session organized and moving along. And I'm here tonight because I, along with my team,
+spend a lot of time working on the ground in your communities, specifically on Superfund sites, sharing information about EPA's work.
+I've worked with many of you over the years and anticipate continuing to work with you on EPA's efforts around PFAS in your communities.
+Thanks again for joining us. Next slide, please. Next, I'd like to just share our basic plan for the evening.
+So right now, as you can tell, we're starting with some housekeeping and introductions. Next, we'll hear a few words
+from EPA Region 1's Regional Administrator, David Cash, who also serves as a Co-Chair of the EPA's PFAS Council.
+Then we'll hear a bit from Emma Forbes, who will share more about per- and polyfluoroalkyl substances, or PFAS,
+and also about EPA's work under the PFAS Strategic Roadmap. Following these remarks,
+we are looking forward to hearing from many of you during the listening session portion of today's event.
+We'll share more details about how you can participate in the listening session when we get to that portion of tonight's agenda.
+But next, I would like to introduce you to David Cash, EPA's Regional Administrator for Region 1 in New England.
+Thanks, David. - Thank you, Kelsey, and first of all, and most importantly, thanks to all of you who are joining us tonight
+for this important conversation. My name's David Cash, and I'm the Regional Administrator for EPA's Region 1, New England.
+Our Region includes six states and 10 tribal nations. In addition, as Kelsey noted,
+to my role as Regional Administrator, I'm also the national Co-Chair of EPA's PFAS Council.
+Prior to coming to EPA, I was the Dean of the John W. McCormick Graduate School of Policy and Global Studies at UMass Boston.
+And I also spent a decade in Massachusetts state government, where I held a range of different positions, including Commissioner of the Department
+of Environmental Protection and a Commissioner of the Department of Public Utilities.
+And in a number of these different roles, I focused on issues like PFAS.
+I will also say I'm a parent, dad of two kids, who are now in their 20s,
+but issues about what's safe for them is always front of mind in raising them.
+We're here tonight to talk about a group of chemicals, as Kelsey mentioned, called PFAS, as well as the efforts that EPA is taking
+or considering, to address these chemicals. And then most importantly, we wanna hear from you.
+You'll hear more from my colleagues about this in a few minutes, but PFAS are widely used, long lasting chemicals,
+often called forever chemicals, because they don't break down over time. There are thousands of different PFAS.
+Studies show that certain PFAS can have serious public health and environmental impacts, and we continue to learn more about the public health,
+the human health and environmental effects of these chemicals. EPA is working to address these chemicals
+using our PFAS Strategic Roadmap, our plan to research, restrict,
+and remediate them. And I wanna acknowledge at the outset that the topic we're discussing tonight can be challenging,
+partly because the issue we're here to talk about can be complex, and also because many of you are likely here
+because PFAS has already impacted you, your family, your community, or because you're concerned that PFAS
+may impact you in the future. Region 1 continues to be actively engaged in PFAS efforts
+throughout New England communities. Our former Deputy Regional Administrator, Deb Szaro,
+was a founding member of EPA's PFAS Council, and served as the council's Co-Chair until her retirement last year.
+The states in Region 1 have been at the forefront of PFAS work and are seen as leaders across the country.
+And we wanna acknowledge all of the work completed by our state partners, and wanna to ensure that we continue to work together
+to address the effects of PFAS contamination on our New England communities. These communities across New England
+were some of the first in the nation where the presence of PFAS was discovered. Communities around the former Pease Air Force Base,
+current and former manufacturing facilities in Vermont and New Hampshire, and farms in Maine, to name a few,
+have been actively engaged on this issue for many years. Many of you that have joined us tonight
+continue to advocate for your families and your neighbors on this important issue. I'd like to focus now on the core group at EPA
+that is working on PFAS, which is our EPA Council on PFAS, or PFAS Council,
+where I serve as one of the co-chairs, as I mentioned. One of Administrator Regan's first actions when he joined EPA in 2021
+was to create EPA's PFAS Council. And in creating the Council, Administrator Regan asked the Council
+to develop an ambitious plan of action to advance science and research,
+to restrict these dangerous chemicals from getting into the environment, and to remediate the problem
+in communities across the country. The plan the council developed is known as the PFAS Strategic Roadmap,
+our whole-of-agency approach to addressing PFAS, and you'll hear more about the specifics of the Roadmap
+in a few minutes. The roadmap sets timelines by which EPA plans to take specific actions
+across each of our major program areas. In addition to these program-specific priority actions,
+we also included a set of actions that cut across our specific program areas. One of these critical areas
+is on engaging directly with communities. A key reason we're holding this session tonight
+is due to a recommendation from EPA's National Environmental Justice Advisory Council
+that we engage with with communities in each EPA Region. And so my EPA colleagues and I are interested
+to hear how PFAS has impacted you. The feedback you provide today will help us better understand what you, your family,
+and your community are experiencing in order to keep us focused on protecting human health
+and the environment, and addressing PFAS contamination. Your feedback will also help us
+better communicate about the risks of PFAS, including information about what PFAS are,
+how they're used, and how they can impact our health. One of the themes you'll hear today
+is the importance of working across the EPA, and also with our partners in other federal agencies,
+with tribal nations, with states, and with the public, to tackle the significant challenge.
+We welcome feedback on ways we can work more effectively with these partners. Another critical area of focus for us
+is to empower meaningful action on behalf of all people who are impacted by these chemicals,
+regardless of their zip code or the color of their skin. A priority area for us at EPA
+is to better understand how PFAS contamination may disproportionately impact communities
+already overburdened by environmental hazards and contamination, and what actions EPA or its partners can take.
+Next, you'll hear about the specific actions EPA has taken and plans to take, and we welcome your feedback on these actions,
+or on additional actions you'd like us to consider. So thank you all again for being here today,
+and I look forward to hearing from many of you during our listening session later this evening. And now I'd like to turn it
+to Region 1's lead point of contact on PFAS, Emma Forbes, to spend some time walking through EPA's PFAS Strategic Roadmap
+and setting the stage for our listening session. Emma? - Thank you very much.
+Good evening, everyone. My name is Emma Forbes. I work for EPA Region 1 in our Superfund and Emergency Management Division.
+I work as a Remedial Project Manager overseeing the cleanup of Superfund sites throughout New England.
+An additional responsibility of mine is to serve as our point of contact for Region 1
+on PFAS issues, and to work closely with the PFAS Council to ensure we are coordinating effectively on PFAS.
+Tonight, I will share some information about the work EPA has done under the PFAS Strategic Roadmap,
+highlight actions we are planning for the future, and listen as you all share your experiences with PFAS
+to inform our work in Region 1 and across the country. Next slide, please.
+As Regional Administrator Cash shared earlier, in April, 2021, EPA Administrator, Michael Regan,
+established the EPA Council on PFAS, and charged it to develop a bold, strategic,
+whole-of-EPA approach to protect public health and the environment from the impacts of PFAS.
+The Council, comprised of senior technical and policy leaders from across EPA program offices
+and regional offices is co-chaired by EPA's Assistant Administrator for Water,
+Radhika Fox, and our New England Regional Administrator, David Cash.
+The Council met administrator Regan's call through the PFAS Strategic Roadmap, which was released in October of 2021.
+The Roadmap does several things. It includes clear timelines for concrete actions
+from 2021 to 2024. It fills a critical gap in federal leadership,
+setting a basic floor of federal protection across the country. It supports state's ongoing efforts
+to tackle PFAS by building critical science, methods, tools, and technologies,
+and it builds on EPA's commitment to restore scientific integrity by making science the foundation of our work.
+I'll return to the specific commitments in our PFAS Roadmap in a few minutes. Next slide, please.
+Before I share more about EPA's PFAS roadmap, I wanted to spend a few minutes talking about per-
+and polyfluoroalkyl substances, and why we are concerned about them. I will refer to per- and polyfluoroalkyl substances
+as PFAS throughout the presentation. PFAS capture a large group of synthetic chemicals,
+made by humans, that consist of chains of carbon atoms surrounded by fluorine atoms.
+There are thousands of different PFAS with a variety of chemical structures. Some of these chemicals have been more widely used
+and studied than others. As examples, this slide shows the chemical structure
+of two of the most widely used and studied chemicals in the PFAS group, known as P-F-O-A and P-F-O-S.
+PFAS have been used in homes, businesses, and industries since the 1940s.
+They have been, and are, used by many industries and found in many consumer products
+due to their useful properties, which includes stain and water resistance, and their beneficial role in firefighting foam
+used to extinguish fuel fires. Due to their widespread use, PFAS have been found in soil, water, fish,
+and air across the country and around the world. Surveys conducted by the Centers for Disease Control
+and Prevention show that most people in the United States have been exposed to PFAS, including measurable levels of certain PFAS in human blood.
+Most known exposures to PFAS are relatively low, but some can be high, particularly when people
+are exposed to a concentrated source over long periods of time. PFAS are a concern to human health
+due to their known or suspected toxicity. Their health effects are better known for some PFAS,
+such as P-F-O-A and P-F-O-S, but much less well known for others.
+I'll describe with it later some of the work that EPA is doing to improve our scientific understanding.
+Finally, scientific research has shown that PFAS can resist decomposition in the environment
+and in the human body due to their unique properties. Next slide, please.
+The lifecycle diagram shown on this slide shows some of the ways in which PFAS are used and can enter the environment.
+I know that some of the texts is very small, but the picture helps to illustrate a few major ways that PFAS can enter the environment
+and potentially impact human health. These ways include discharges of PFAS pollution
+from manufacturing facilities, discharges of PFAS containing firefighting foam,
+PFAS entering wastewater treatment facilities from upstream sources, and PFAS applied to agricultural fields
+as a component of biosolids. Biosolids are the solid organic matter
+left over from the wastewater treatment process. Through these significant and diverse pathways,
+PFAS contamination presents unique challenges. EPA's approach toward PFAS
+takes this uniqueness into account and is centered around the following principles: first, consider the lifecycle of PFAS,
+including their unique properties, the ubiquity of their uses, and the multiple pathways for exposure.
+Second, get upstream of the problem. EPA is bringing deeper focus to preventing PFAS
+from entering the environment in the first place, a foundational step to reducing the exposure
+and potential risks of future PFAS contamination. Third, hold polluters accountable
+for their actions and for PFAS remediation efforts. Fourth, ensure science-based decision making.
+EPA is investing in scientific research to fill gaps in our understanding of PFAS.
+And fifth, prioritize protection of disadvantaged communities. When taking action on PFAS,
+EPA is ensuring that disadvantaged communities have equitable access to solutions.
+And this principle of protecting communities is a critical reason why we are here tonight. Next slide, please.
+The risks posed by PFAS demand that EPA attack the PFAS problem on multiple fronts at the same time.
+The actions described in our Strategic Roadmap each represent important and meaningful steps to safeguard communities from PFAS contamination.
+And we believe that these actions will build upon one another and lead to more enduring and protective solutions.
+EPA's integrated approach to PFAS is focused on three goals: first is research.
+EPA is investing in research, development, and innovation to increase understanding of PFAS exposure,
+exposures and toxicities, human health and ecological effects, and actions we can take
+to incorporate the best available science. Second is restrict.
+EPA is pursuing a comprehensive approach to proactively prevent PFAS from entering air, land,
+and water at levels that can adversely impact human health and the environment.
+And third, remediate. EPA is broadening and accelerating the cleanup of PFAS contamination.
+Next slide, please. In the PFAS Roadmap,
+EPA committed to issuing a public report on its PFAS progress each year. In November of 2022,
+EPA released its first one-year progress report, summarizing the critical actions that we've taken.
+Since the Roadmap's release in October, 2021, EPA has taken the following actions,
+which I'll talk about in greater detail later on in the presentation. Apologies for some technical difficulties on my end.
+So since October of 2021, we've proposed to designate two PFAS as hazardous substances under CERCLA or Superfund.
+We've released drinking water health advisories for four PFAS. We've laid the foundation for enhancing data on PFAS.
+We've begun distributing 10 billion in funding to address emerging contaminants under the Bipartisan Infrastructure Law.
+We've expanded the scientific understanding of PFAS and translated this science into EPA's efforts.
+We've proactively used enforcement tools to better identify and address PFAS releases.
+And we've released a set of PFAS analytic tools to publicly share data on PFAS in communities.
+And finally, we have engaged with federal partners and the public. EPA's PFAS work was informed by public webinars,
+stakeholder meetings, congressional testimony, and engagement with EPA's federal advisory committees.
+EPA is also coordinating with its federal agency partners in the Biden-Harris Administration
+to harness the collective knowledge, experience, and capacity of the federal government to address PFAS.
+In addition to highlighting the actions that EPA has taken, our one-year progress report also identified a series
+of upcoming priority actions for 2023, such as proposing a national drinking water standard,
+which we just announced last month. Taking final action on the proposed CERCLA designation
+for P-F-O-A and P-F-O-S, continuing to improve chemical data and safety,
+restricting upstream PFAS discharges to waterways, addressing PFAS in biosolids,
+and engaging with communities, like we're doing here tonight. I will cover each of these upcoming actions
+in a few moments. Next slide, please.
+Over the next few slides, I will cover some program specific commitments from the various offices here at EPA.
+As I highlighted earlier, science and research are the foundation of EPA's work on PFAS.
+EPA is working to improve the scientific understanding of PFAS in three primary areas.
+First, we are working to develop and validate methods to detect and measure PFAS in the environment.
+Second, we are working to advance the science to assess human health and environmental risks from PFAS.
+Our scientists are developing human health toxicity assessments for additional PFAS,
+compiling and summarizing available and relevant scientific information, identifying PFAS sources,
+the way PFAS move in the environment, and the pathways by which people can be exposed to PFAS,
+and characterizing how PFAS exposure may contribute to accumulative impacts on communities.
+And third, we are working to evaluate and develop technologies for reducing PFAS in the environment.
+This work will inform decisions on drinking water and wastewater treatment, contaminated site cleanup and remediation,
+air emission controls, and end of life materials management. Next slide, please.
+The next area that I'll cover is our work to ensure chemical safety. EPA's Office of Chemical Safety and Pollution Prevention
+is working on many actions to restrict PFAS, and most of these actions fall under two laws:
+the Toxic Substances Control Act, or you may know it as TSCA, and the Toxics Release Inventory Program,
+which you might know as the TRI program. First of all, EPA is working to deepen our understanding
+of PFAS categories through the National PFAS testing strategy, which the EPA released in October of 2021.
+The testing strategy is a major step towards the game-changing goal of breaking PFAS into distinct categories to direct research,
+amplify regulatory action, and accelerate technology and policy solutions to restrict and remediate PFAS.
+Second, EPA is working under its TSCA authorities to strengthen EPA oversight over both new
+and existing PFAS. EPA is working to ensure a robust review process
+for new PFAS to ensure that chemicals are safe before they enter commerce.
+And we're working to review existing PFAS under TSCA to ensure they're being used in ways
+that do not present concerns, and to prevent resumed production of legacy PFAS or their use in new ways.
+For example, in late January, EPA proposed a rule that would ensure that any discontinued use of certain PFAS
+cannot reenter the marketplace without EPA review. Third, EPA is collecting data
+and improving reporting on how PFAS are used and released. Under TSCA, we are working on a final rule
+to better characterize the sources and quantities of manufactured PFAS in the United States.
+This final rule would collect significant new information on chemical quantities, byproducts, worker exposures,
+and disposal methods. Under the Toxics Release Inventory, we are working to enhance PFAS reporting
+by proposing a rule to remove exemptions and exclusions from reporting. Last December, EPA released a proposed rule
+to enhance Toxics Release Inventory, or PFAS reporting. If finalized, this rule would enhance the data
+available to the public, so EPA and other federal, tribal, state, and local agencies can use these data
+to best protect health and the environment. And fourth, EPA is working to reduce the presence of PFAS
+in products purchased by the federal government. In December, 2021, President Biden signed an executive order
+that will reestablish the federal government as a leader in sustainability. A critical element of the executive order
+is to promote sustainable federal purchasing, which includes prioritizing the purchase of products without added PFAS.
+EPA is taking the leadership role in this work. Next slide, please.
+Next, we will cover our Office of Water, where we are taking an extensive set of actions to restrict PFAS through EPA's programs
+to protect drinking water and our lakes, rivers, and streams. First, let's take a look at drinking water.
+On March 14th, EPA took a key step to protect public health by proposing a first-ever national drinking water standard
+for six PFAS, fulfilling a foundational commitment in the PFAS Strategic Roadmap.
+Through this proposed rule, EPA is taking a major step to protect public health from PFAS pollution,
+leveraging the latest science and complimenting state efforts to limit PFAS by proposing to establish legally enforceable levels
+for six PFAS known to occur in drinking water. The rule is now open for public comment until May 30th,
+and you can learn more about the proposed rule and about how to access the formal public comment docket
+on our website, which is www.epa.gov/pfas.
+which is www.epa.gov/pfas. EPA recently held two webinars on the proposed rule,
+and we also made the webinar recordings and presentation materials available on our website.
+We'll be holding a virtual public hearing on the proposed rule on May 4th.
+You can learn more about these opportunities at our website, which again is epa.gov/pfas.
+For drinking water, EPA is also working to improve drinking water data through monitoring toxicity assessments
+and health advisories. EPA is currently taking important steps to monitor drinking water in communities
+across the country through our fifth Unregulated Contaminant Monitoring Rule, or UCMR 5.
+This program is testing for 29 PFAS chemicals from 2023 to 2025
+in thousands of drinking water systems nationwide. You may remember that an earlier round of EPA monitoring
+from 2013 to 2015 helped us discover PFAS contamination, and led to significant state and local actions
+to safeguard our drinking water. With our latest rule, we are taking it a step further.
+We'll be testing for nearly five times more PFAS, at significantly more water systems
+and using methods that can detect PFAS at much lower levels. These new data will be critical
+in improving our understanding of how communities, including low-income communities and communities of color,
+may be exposed to PFAS in their drinking water. As I mentioned earlier, in June, 2022,
+EPA released four health advisories, interim health advisories for P-F-O-A and P-F-O-S,
+and final health advisories for P-F-B-S and for GenX chemicals.
+Under the Clean Water Act, EPA is working to develop national, technology-based discharge limits
+for industries that use PFAS through our Effluent Limitations Guidelines program.
+In January of 2023, EPA released its final Effluent Limitation Guidelines Plan 15,
+which outlines key steps towards addressing PFAS discharges across a range of industrial categories.
+Also, under the Clean Water Act, we're working to address PFAS in permitting and through analytical methods, water quality criteria,
+and fish advisories. We are working to leverage the National Pollutant Discharge Elimination System,
+or NPDES, wastewater permitting program to improve monitoring and to reduce PFAS discharges to waterways.
+In December, 2022, EPA released new guidance to states describing how to leverage permits
+and pre-treatment programs to increase monitoring, including at known or suspected dischargers of PFAS.
+This guidance will enable states to take appropriate steps to restrict PFAS at their source,
+collect important data on PFAS discharges, and enable communities to work closely with their state permitting authorities
+to take action where discharges may occur. We are also working on improved analytical methods
+to measure more PFAS in more places. In April of 2022,
+EPA released draft aquatic life water quality criteria for public comment for P-F-O-A and P-F-O-S,
+which reflect the latest peer reviewed scientific knowledge regarding the effects of these chemicals on freshwater aquatic organisms.
+We are also working to enhance data availability on PFAS in fish tissue to help states and tribes
+to set PFAS fish advisories. And finally, as I referenced earlier,
+we're working to evaluate the risks of PFAS in biosolids. We will be finalizing a risk assessment
+for P-F-O-A and P-F-O-S that will serve as the basis for determining whether regulation of these two chemicals
+in biosolids is appropriate. Next slide, please.
+This slide covers two of our program offices, our Office of Land and Emergency Management,
+which houses EPA's cleanup programs, and our Office of Air and Radiation,
+where our team of experts work to address air pollution. First, we'll talk about a specific action
+that I highlighted earlier, under CERCLA, which is the Comprehensive Environmental Response,
+Compensation and Liability Act, or more commonly known as Superfund.
+In September, 2022, EPA published a proposed rule to designate P-F-O-A and P-F-O-S
+as hazardous substances under CERCLA, or Superfund. If finalized, this rule would require facilities
+across the country to report P-F-O-A and P-F-O-S releases that meet or exceed the reportable quantity
+for these substances, enhance the ability of federal, tribal nations, state,
+and local authorities to obtain information regarding the location and extent of releases.
+Enhance the ability of EPA and other agencies to respond to release or threats of releases
+of P-F-O-A and P-F-O-S, and it would help establish national consistency
+in the evaluation and cleanup of P-F-O-A and P-F-O-S, and encourage better waste management practices.
+As identified in the Roadmap, EPA intends to take final action on this proposed rule in 2023,
+and we'll continue to work closely with stakeholders to better understand equity concerns.
+As an additional step, EPA anticipates issuing an advanced notice of proposed rulemaking in the coming days
+to seek public comment on designating other PFAS chemicals as CERCLA hazardous substances.
+Next, under the Resource Conservation and Recovery Act, EPA plans to propose two regulations in 2023.
+First, EPA plans to develop a proposed rule to add specific PFAS to the list of hazardous constituents,
+which would mean these PFAS are subject to RCRA corrective action requirements.
+Second, EPA plans to clarify that emerging contaminants such as PFAS can be cleaned up
+through the RCRA corrective action process. The third item on this slide highlights EPA's commitment
+to take significant steps towards updating our research and guidance on PFAS destruction and disposal,
+EPA published interim guidance in December of 2020. In that document, we highlighted significant uncertainties
+about the effectiveness of some PFAS destruction and disposal technologies. We have a deadline to update this guidance
+by December, 2023. Finally, our office of Air and Radiation
+is also taking steps toward restricting PFAS by building the technical foundation for potential Clean Air Act regulation.
+We are working to identify sources, to develop monitoring approaches and information on mitigation technologies,
+and to increase our understanding of the fate and transport of PFAS air emissions.
+This work will support future decisions on whether to designate PFAS as hazardous air pollutants
+under the Clean Air Act. Next slide, please.
+No conversation about PFAS is complete without highlighting the transformational investments being made in America's water infrastructure
+through the Bipartisan Infrastructure Law, or the BIL, signed by President Biden in November, 2021.
+The BIL provides the single largest investment in clean water that the federal government has ever made.
+The BIL will build on research, restrictions, and remediation called for in the PFAS Roadmap
+by providing $10 billion for communities impacted by PFAS and other emerging contaminants.
+The BIL builds on three of EPA's existing water finance programs, but focuses them specifically on PFAS
+and emerging contaminants. And it provides all $10 billion of these funds
+without a requirement for state matching funds. And all funds are provided as either grants
+or principle-forgiveness loans. Of the $10 billion, $4 billion will flow
+through the Drinking Water State Revolving Fund, $1 billion will flow through the Clean Water State Revolving Fund,
+$5 billion will provide grants to address emerging contaminants in small and disadvantaged communities.
+In February of 2023, EPA announced the availability of $2 billion
+from this program to address emerging contaminants, including PFAS, and drinking water across the country.
+These funds will be allocated to states and territories and will promote access to safe and clean water in small, rural,
+and disadvantaged communities while supporting local economies. EPA is committed to maximizing the impact of these funds
+in addressing urgent water challenges facing communities. We are thrilled that these funds will enable communities
+to invest in PFAS treatment solutions while EPA continues to take action to research, restrict,
+and remediate PFAS consistent with our PFAS Strategic Roadmap.
+So I've covered a lot of information in this presentation tonight, and I would encourage you all to visit our website,
+which, again, is epa.gov/pfas.
+There you can find all of this information and much more on what actions EPA has taken
+and plans to take on PFAS. The website is regularly updated, and we will have the latest information
+related to new rulemakings and other actions. With that, I would like to thank you all for listening tonight,
+and I'll turn it back over to our moderator, Kelsey, to talk more about the next part of our session where we will hear from you.
+Thank you. - Thank you, Emma.
+So in a few minutes, we look forward to providing an opportunity for those of you who are interested to share your feedback with us.
+But before we do, I wanted to provide you with a little bit of background. So first of all, I want to emphasize that the feedback
+you share with us tonight will help inform future actions EPA takes towards helping communities address PFAS contamination.
+One important thing to note is that the feedback you share with us all will not be considered as part of the formal comment process
+for any specific action EPA is taking consistent with EPA's PFAS Strategic Roadmap.
+If you have comments on any specific action we're taking, such as the proposed regulation, you should provide those comments
+as part of the formal public comment process. You can learn more about those actions we have taken at our website.
+Again, that's www.epa.gov/pfas.
+One other question you may have is what EPA plans to do with the feedback you share with us tonight.
+First of all, we will not be responding to individual comments we receive, however, we do plan to take back everything
+we hear from you tonight, as well as the feedback we gather at the other regional listening sessions we are holding,
+and as well as the session we held for tribes on April 6th to inform EPA's future work on PFAS.
+Now I'd like to turn it back over to Grace at LRG to share some additional details about how our listening session will work.
+
+PUBLIC COMMENT STARTS HERE
+- Thank you, Kelsey. We will now be opening this session for public feedback. First, we'll hear from individuals
+who signed up during the registration process. Before we get to those folks, a couple of tips on how to share verbal feedback.
+If you signed up ahead of time, you'll receive a message in Zoom, and you'll need to click on that message.
+That will give you speaking permission. When you have speaker permissions, we'll call your name.
+At that point, you should unmute and begin speaking. You're welcome to turn on your camera, or you can keep it off.
+Please limit your comment to three minutes. And I also wanted to mention that if you have trouble
+clicking on the popup in Zoom or unmuting yourself, you can email us at info@pfascommunityengagement.org
+and we can try and help resolve your issue. And even if we're unable to help you before
+and we get through all of the speakers that signed up for public feedback ahead of time,
+we expect that we'll have the opportunity to open it up to anyone on this call who would like to give feedback
+towards the end of the session. So with that, I'll turn it back over to our moderator, Kelsey,
+and just sometimes it can take us a few moments to get our speakers ready.
+So please be patient as we pull up speakers who have signed up for public feedback.
+Thank you. - Thank you, Grace. It looks like Marguerite is ready.
+So Margarite, if you're there, feel free to begin.
+You are muted, Marguerite.
+- My name is Marguerite Adelman, and I'm the Coordinator of the Vermont PFAS Military Poisons Coalition,
+which is a project of the Women's International League for Peace and Freedoms Earth Democracy Committee.
+The EPA's proposed drinking water limits on six PFAs
+do not go far enough. We support them, but we believe more needs to be done.
+At least 14,000 PFAS have been identified, and the few PFAS that have been studied are toxic.
+We know that all PFAS are persistent with one of the strongest bonds in chemistry,
+and in order to protect human health and the environment, the EPA needs to ban all forms of PFAS
+as soon as possible. Waiting for a miraculous remediation system is not practical, affordable,
+or even scalable on a large scale. Because of the EPA's chemical-by-chemical approach,
+public health and the environment are in crisis. We must regulate PFAS as a class of chemicals
+and ban all but essential uses of PFAS. The EPA's PFAS water quality standards
+are not comprehensive, and they take too long to enact, are too confusing with the Health Hazard Index
+for four forms of PFAS, and don't set P-F-O-A and P-F-O-S
+at limits needed to protect people from harm. We know that the health advisory limit is much lower.
+We just can't detect that low at this point.
+Why can't the EPA do what the European Chemical Agency, ECHA, has done in February of 2023?
+They're proposing restrictions setting out the pathway for the EU to ban production
+and import of over 10,000 persistent PFAS chemical.
+This ban is truly extensive, and the first of its kind. 108 companies have already signed on
+to phasing out PFAS chemicals. The precautionary principle is truly needed in the US.
+We need to move the burden of proof for potentially harmful actions to industry and government.
+And when there are threats of serious damage to public health and the environment,
+scientific uncertainty must be resolved in favor of prevention
+and protection of people and planet. Thank you so much,
+and I hope to see more. - Thank you, Marguerite.
+It looks like Laurene is ready. Feel free to unmute. - Thank you very much. I'm really pleased that you did this.
+I'm really happy with what you're doing. You've laid a good foundation. My name is Laurene Allen. I live in Merrimack, New Hampshire.
+I am one of the Co-Founders of Merrimack Citizens for Clean Water. We learned in 2016
+that the water we believed to be safe was contaminated from Saint-Gobain Performance Plastics,
+PTFE coating of fabric, and/or water and land, and environmental contamination
+came from and still comes from their air stacks. So air, water, biosolids,
+all of the pieces that you mentioned are key. Back in 2018, the EPA engaged in a session here at Exeter, New Hampshire.
+I was really pleased to work with Andrea Amico and Kristen Mellow, and some of our friends from Cape Cod
+to help make that happen. And Alex Dunn was a great help to us in saying, "Hey, we need a seat at the table."
+So we went there, and we know that everyone heard way more than they bargained for. That's on video.
+If you haven't watched it, please watch it. Those asks back then are still pertinent now.
+And while you're laying a great foundation, you know, I have to say, I apply it to this case study.
+That's the best way I can filter it. Everything that I say in general, every community across the nation
+in the National PFAS Contamination Coalition would agree wholeheartedly. Our details are different,
+our state approaches are different, but our asks are the same. And you know that. I know you know that.
+So I know you're familiar with New Hampshire. You know, we were right up there with the testing and monitoring from the beginning.
+DES has done a phenomenal job trying to ask for EPA ORD assistance and really tracking, monitoring,
+and getting data. Well, you know, monitoring, testing do not solve the problem. Seven years into this nightmare of five communities,
+five communities at least, that are heavily contaminated with this. And what we find is our polluter
+is running the investigation. Any accountability or responsibility they take is premised with,
+"Well, we don't agree that we're responsible, but we agree to." They've restricted our rights, they've enhanced theirs,
+and it's been horrible. You know, it's been seven years of this. So for all the work that we've done in New Hampshire,
+it's all been citizen-driven. They haven't done anything voluntarily. We have passed legislation,
+we've come as far as we can, but we need the EPA's backup, we really do, for cleanup,
+for hazardous substance designation, and even in the regulatory that you do. So let me just give you one example
+of how this applies to my site. When you set forth, you know, the MCLs for P-F-O-A and P-F-O-S for rulemaking,
+I couldn't be happier. We're so happy. When I heard about the Hazardous Index approach,
+I was really thrilled. I said, "Wow, this is brilliant. You know, you're using what exists and you're really incorporating,
+and you're doing a good job to say, 'Let's lay the foundation for mixtures.'" So I went and I took the little formula
+and I said, "How does this affect me? How does it affect surrounding communities, Bedford, Amherst, Londonderry?
+How does it affect people I know in other states?" So I started asking around, and I said, "Can you plug your numbers in?"
+I know the testing data in this state. I'm a clinical social worker, but I'll tell you, I've had to become my own PFAS expert,
+because in the beginning, any support, guidance, and information, nothing was satisfactory.
+So we have done a lot. So just to give you an example, when I look at the Hazardous Substance Index,
+and the best argument I can make for class regulation is, aside from, you know,
+the sound bite that you hear from all of us, you know, we're exposed as a class, so we need to treat it as a class, right?
+That's a simple concept. I know it's not that simple. You have to defend your actions.
+But I was very concerned when I realized what was on the list of hazardous index,
+you know, comparison, and what wasn't. And what I noticed right away is the four PFAS,
+in addition to P-F-O-A, that we find here in the greatest quantities, which are the same lineage of what you have on that list,
+but they're almost - I think of it as, you know, we see those PFAS family trees, and we have the P-F-O-S area,
+and now we have the P-F-O-A area, right? So it's my opinion that the fluoropolymer industry
+is very powerful, and it almost seems that they're being protected. So PFBA, PFPeA,
+PFHpA, and PFHxA, those four have consistently
+appeared in our water at higher levels than the four in your hazardous index.
+We also see some of them breaking through the GAC systems that we've put millions of dollars into.
+So I'm a big believer in, if we're gonna spend money, whoever's money it is, you know, we need to spend it.
+This is not acceptable. We have a lot of sick people here and lots of sad stories everywhere you look.
+So we need to spend that money wisely. So what you know at the EPA is the nation turns to you,
+what you regulate and what you set forth becomes the design for the engineering. So groundwater is our drinking water source in this area.
+Groundwater is not really treated by RO, it's treated by other systems.
+So if we only look at what you are setting forth to regulate, we aren't improving our water quality here,
+because the PFBA and PFHpA, in particular, are breaking through. Not only are they breaking through,
+but what's going into our system, we can look at that raw water in the wells that are closest
+to Saint-Gobain in particular, then we can measure the water that comes out of our system with fresh, new, medium and designed,
+and everything's running smoothly. It's coming out higher than it's going in. So not only do we need some technical guidance,
+we need regulations that include more than you've set out to, because we don't have any rights.
+So we cannot get our water cleaned to the extent we need it to, we cannot get it designed properly, unless -
+You know, we can't roll up our sleeves and do this ourselves. We can raise a bar in New Hampshire, and people will pitch in, but we cannot do this.
+So, you know, what you're doing is a great foundation, but until we acknowledge a fully fluorinated carbon atom
+is a PFAS, you know, that's another pet peeve mine, we have to look at what is a PFAS,
+what's in the drinking water. You know, UCMR 5 is behind. It's great that you extended the panel,
+but Eurofins has a 70 PFAS test that I can put some water and, you know, put it in.
+There's things that are coming up on that test panel in our water here that isn't even going to be counted in UCMR 5.
+So those are just a few of my thoughts. You know, what you're doing is phenomenal. You've made great progress in a short period of time.
+I know government doesn't work that way, and I'm really impressed on the one hand. On the other hand,
+I'm seven years into this battle, and I would like to return to my life
+and ensure that everybody's safe. Thank you. - Thank you, Laurene.
+And John Macone is up next. John, feel free to unmute.
+- Hello. Hi, I'm John Macone. I'm from the Merrimack River Watershed Council,
+and thank you for what you're doing. I appreciate this forum and all the information you've provided.
+There's been some talk specifically about the Merrimack River, about Merrimack, Hampshire,
+and that's my area of focus, and I'm sure there are other rivers like this across the country where we have these hotspots,
+such as been discussed with Saint-Gobain, where we know that there's a source of contamination
+that's coming across an open river. In the case of the Merrimack, down river from this source,
+you have over 400,000 people, mostly in EJ communities, who are getting their primary drinking water
+from that river, and there is not sufficient testing, monitoring,
+or tracking of what's actually happening within the river right now, and that's one area that we'd like to see improved.
+We're also looking at, you know, what is happening with the wastewater treatment plant. Sounds like you're gonna be addressing that.
+I hope that can be pushed along as quickly as possible. So anyways, thank you so much. And I know you've got a bunch of people to get through.
+Thanks for your time. - Thank you, John. Kristen Mello, if you're ready.
+- Hi, thank you so much for this opportunity, and thank you for holding this forum.
+I would just like to say, first of all, I'm from Westfield, Massachusetts,
+home of Barnes Air National Guard Base, which, you know, the AFFF use
+resulted in the contamination of four municipal and dozens of private drinking water wells
+here in the city of Westfield. I wanna applaud the proposal for federal limits.
+It's very important, especially for people who are not in Massachusetts and other states with regulations.
+It's very important for everyone else suffering to get a handle on this. And so I wholeheartedly support federal PFAS regulations,
+but I have to lend also my voice and support of the people who have asked you to please reconsider what a PFAS is, right?
+When OECD remade their definition, all of a sudden 6.3 million different PFAS
+existed in the world, right? Just because they redefined their, you know, what they were calling a PFAS.
+And we need to get our minds wrapped around the structure activity relationships
+of different functional groups, and PFAS that have been used for different reasons,
+and different generations of PFAS. We need to group this together as a family,
+and we need to regulate them together, because otherwise we're never gonna get through this. But I would also like to take my time
+to speak about the difference between approval and monitoring with prevention and protection.
+We really need no more PFAS approved. We have enough going on.
+There's enough going on. We need to stop where we are, stop making it worse, and begin to figure out how we're gonna undo this.
+Also, I would not be me, and I know Kelsey's waiting for it. The EPA Region 1 has been very responsive to me
+in the last week. We have a RCRA site out here in Westfield that is a historic chrome plating site,
+and it was open in the late 1800s, and they used to dump everything onsite, and it's in a flood-prone area,
+and there is an EJ community right next to it. And the thing is, it was beginning to be closed out in 2012.
+No one has ever tested it for PFAS. The city of Westfield has approved development
+over this site. It's gonna move that groundwater plume. No one has ever looked at the groundwater plume,
+because it's a RCRA site, and the RCRA site is EPA's domain, not MassDEP's domain.
+And so even though Massachusetts has regulatory limits for PFAS that would trigger something in this area,
+it's based on EPA, and EPA, although you have been fabulous in sending me documents,
+and thank you so much, I mean, honestly, you know I've been ripping through them, there's no analytical data in the last 10 years,
+and nobody's looking, nobody knows anything about this site, and EPA is agnostic on local zoning and building,
+and so there is nothing to stop them. There's no enforcement. And so as you look through things,
+I would like you to please think of protection as prevention and enforcement,
+not approval and monitoring. And thank you so much, and thank you for your engagement in Westfield.
+- Thanks, Kristen. Up next, Jennifer Pederson.
+- Thank you. My name is Jennifer Pederson. I'm the Executive Director of Massachusetts Water Works Association.
+Mass Water Works represents public water systems in Massachusetts, and we appreciate the opportunity to comment on EPA's action plan.
+The presentation tonight shows how far-reaching the impacts of PFAS are. Water systems are regulated
+under the Safe Drinking Water Act, and, unfortunately, are bearing the brunt of EPA's actions
+related to PFAS, not the responsible parties. EPA should focus on preventing PFAS
+from entering the environment and cleaning it up through other statutes that you discussed tonight.
+We support EPA's efforts in this regard. Regarding the CERCLA Hazardous Substance designation,
+Mass Water Works and other organizations have gone on the record that CERCLA liability for PFOA, PFOS,
+and other PFAS, while important, as currently drafted, will place significant costs on local government,
+particularly water and wastewater systems, who are treating drinking water and wastewater to protect public health and the environment,
+costs that will be borne by ratepayers. EPA needs to provide an exemption under CERCLA to utilities who do not cause the contamination,
+but are working hard to remediate it. Drinking water and wastewater PFAS treatment
+is very costly. I wanna be very clear, the money allocated through the Bipartisan Infrastructure Law
+is nowhere near sufficient to cover the costs that our water systems and their ratepayers
+are already facing. Massachusetts was projected to receive $87 million over the five years of the BIL funding.
+In FY23, the Massachusetts drinking water SRF allotment is $16 million for emerging contaminants.
+There's another $38 million over the next two years for the Small and Disadvantaged Communities Grant Program.
+In Massachusetts where we have a drinking water standard, $149 million in funding has already been committed for 24 projects
+to help systems address a maximum containment level of 20 parts per trillion, far above the level that EPA is proposing.
+The most recent intended use plan was just released yesterday, and let me give you some of the anticipated PFAS project costs.
+$20 million for Bellingham, $5.6 million in Franklin, $23 million in Raynham,
+$16 million in Acton, $32 million in Webster. These are just a small subset of the projects on the list,
+and as you can see, the BIL funds will be exhausted very quickly. While there is some grant funding available,
+the majority of these projects are loans to be paid back by the ratepayers. We need additional funding to support our water systems
+in addressing this issue. Mass Water Works has already submitted request to EPA to extend the public comment period
+for the draft drinking water standard by 90 days. Giving the public 60 days to look at a docket
+with 1300 supporting documents, including 26 key support documents, that total 5,000 pages in length,
+is not sufficient. And I'll close by saying that risk communication for PFAS is very challenging.
+EPA has committed to assisting states and local government with risk communication, but the products to date and the agency's own communications
+have not been particularly helpful. There's been much focus on communicating how to reduce risk
+through drinking water, but very little on how people can reduce risk in other areas of their daily lives.
+We look forward to working with the EPA to address the enormous issues that PFAS have caused,
+but we definitely need additional support for our communities in doing so. Thank you.
+- Thank you, Jennifer. Next we have Mike Bald. Feel free to unmute.
+- [Mike] Hello. Thank you. I'll keep my video off just to save the bandwidth. So you can hear me, I assume.
+- We can. Yes. - [Mike] Great. Thank you. I just wanna say thank you to all of you on the...
+Basically doing the important work, so Mr. Cash, Ms. Forbes,
+the Commissioner, thank you all. I think the Council can accomplish some good things. I'm glad you have a timeline.
+I'm in Central Vermont. I'm self-employed. I think the timeline idea is important,
+because we don't have time for this. We need solutions, we need 'em now.
+I say that because I read a book in 1990, 1992,
+"Our Stolen Future" by Theo Colborn, and it talked then about human sperm counts
+being down 50% from what they were in the 1930s. So that's what it was 30 years ago.
+I have no idea what it is today, but that's not a good trend. Is that atrazine? Is that pesticides?
+Probably, yes. And what is the PFAS component in pesticides?
+Nobody will tell us, at least not in Vermont. So I wanna make sure you understand, all of you,
+that even though you're attempting to do good work, the trust bucket is essentially empty.
+That's not just because I'm a veteran and I've learned a few things, but there's zero trust, is your start point.
+'Cause when we reach out to the Agency of Health or the Agency of Agriculture in Vermont, they won't tell us if there's PFAS in the pesticides.
+And I just know that... I know for a fact the cover crops are killed with pesticide,
+the crop is dusted with pesticide two or three times, and then the harvest process includes pesticide.
+So how am I supposed to eat? I mean, how am I supposed to... Am I supposed to go buy bottled water for the rest of my life?
+I live near the railroad tracks. I can't get a straight answer as to how Triclopyr
+and atrazine and dicamba, how do they react with creosote in the ties?
+So a lot of issues. I'm glad you have a timeline. I would like to say that if my name's gonna be visible
+on these public participations, I'd like to know all the other participants as well,
+because that would help build my trust to know which corporations are involved here,
+and who else is speaking or, perhaps, lobbying to be part of your vision.
+We do need a vision. Finally, I'll just say with regard to purchasing,
+I hope other federal agencies are listening in the world of purchasing products that don't contain PFAS,
+because the US Forest Service and a lot of state agencies sure purchase a lot of pesticide,
+and then they use it all over the state, and who knows what's in that. So thank you for your time. Carry on.
+- Thank you, Mike, and thank you for your service as well.
+So we're just waiting one moment here. Just a reminder, if you'd like to click on the prompt
+that comes up if you are interested in speaking. And we won't be responding to any questions tonight,
+but are taking notes on all of these questions and all the concerns that come up, and they'll all be reviewed.
+We don't have anyone else prompted to speak at the moment, so at this point we would like to open it up
+to others who had not registered to speak tonight.
+So if anyone else is interested in sharing additional feedback, please click on the raised hand button,
+and please keep your hand raised until you've had an opportunity to give your feedback. You can unmute your button when your name is called.
+And I will note that the participant list is on everyone's screen. I believe you can click on participants,
+if folks are interested in reading the names of anyone else participating.
+So just again, a reminder that if anyone is interested in making a comment tonight and giving us feedback,
+please click on the raise hand button. And if you are joining via phone,
+you can press *9 to share a comment.
+I would like to give it one more minute, because I know we had others that had registered to speak.
+Okay, Mike. Mike Bald, I see you'd like to add a comment there. Feel free to unmute and speak again.
+- [Mike] Thank you, Kelsey. I see the participant list now, but only because I'm a panelist now,
+so I guess when you're just a regular participant, you don't see that. - I apologize, that was a misspeak on my part.
+The participant list is not viewable. You're correct. It's only the panelist there.
+- [Mike] Okay, well, that was my point from my comment earlier, is that I hope that's a two-way street
+that we all get to see who's taking part in the conversation.
+I can stop there. Thank you. - Thank you for noting that. We can follow up with you as well.
+All right, we'll give it one more moment. If anyone has interest in speaking, you may raise your hand,
+or if you're on the phone, press *9.
+Okay, well, with that, feel free to continue to raise your hand while we are here,
+but at this point, I would like to turn it back over to Emma,
+who's gonna share a few of the highlights from this evening's comments.
+- Yeah, thanks everyone for your comments this evening. And again, if you have any more comments, you can feel free to raise your hand
+while we're still here, if you wanna make any remarks. Some of the general themes that we heard were,
+I think, about the MCL, with adding additional PFAS into the MCL proposed rule.
+We also heard about the idea of regulating as a class, and, of course, concerns about pesticides
+that we heard from Mike at the very end there. Seeing other feedback we have,
+looking at my notes.
+We heard about the importance of EPA's PFAS work to provide federal leadership on PFAS and to build on early efforts from our Region 1 states,
+but also a strong desire for EPA to go further. We heard about the importance of addressing PFAS as a class,
+not simply as one chemical at a time, particularly in the area of drinking water and our chemical safety programs.
+We heard specific concerns about PFAS impacted communities and sources within Region 1, including military bases, manufacturing facilities,
+and chromium plating facilities. We heard about the importance of improving our monitoring of PFAS,
+including in both drinking water and rivers, but also the need to move beyond monitoring and reduce PFAS pollution.
+We heard significant concerns about how to pay for the cost of PFAS treatment, especially the impacts on communities and ratepayers.
+We heard about the importance of preventing PFAS contamination in the first place and holding those responsible for contamination
+accountable and using EPA's enforcement tools. And we also heard about the importance of EPA
+taking action and setting clear deadlines in our work, as well as how important it's to communicate effectively
+about the risks of PFAS and to build trust with our communities. Thank you again for all of your feedback.
+I'll turn it back over to Kelsey.
+Oh, Kelsey, I think you're muted. - Thank you. Sorry about that.
+So following today's session, I wanna highlight that you may continue to share input after this event via email to pfascouncil@epa.gov.
+And as we noted earlier, first, the feedback you share with us either orally or via email,
+will not be considered as part of the formal comment process for any specific action EPA is taking under the PFAS Strategic Roadmap.
+You can find more information on EPA's efforts on PFAS at EPA's website, which is www.epa.gov/pfas.
+On that site, you can also find links to each of the major actions EPA is taking under the PFAS Roadmap,
+and where appropriate, links to the formal comment opportunities for each action through an online docket.
+And second, we do not plan to individually respond to the comments we receive, but we do plan to synthesize what we've learned
+from each of our Regional sessions, as well as the April 6th session for Tribes to inform EPA's future work on PFAS.
+Next slide, please. So with that, I would like to thank you all for joining us tonight,
+and a special thanks to those of you who shared feedback with us today. I'd also like to thank our Regional Administrator
+and EPA PFAS Council Co-Chair, David Cash, and our Region 1 colleague, Emma Forbes,
+for joining us as well, and for tonight's presentations. Thank you all and have a great night.
