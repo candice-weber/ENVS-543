@@ -1,0 +1,522 @@
+---
+title: "Final Exam for ENVS 543 Fall 2024"
+format: 
+  html:
+      toc: TRUE
+      toc-depth: 2
+author: Candice Weber
+date: today
+abstract: "This study seeks to determine the extent to which changing climate may have impacted sex ratio divergence among locations in the Sonora Desert bark beetle, Araptus attenuatus.  Habitat suitability - both observed present day and estimated for the Last Glacial Maximum - is considered at a number of different sites."
+---
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+# Loading in packages and data
+
+library(raster)
+library(tidyverse)
+library(stringr)
+library(ggrepel)
+library(sf)
+library(broom)
+library(kableExtra)
+library(AICcmodavg)
+samples <- read_csv("Arapat_Samples.csv")
+locations <- read_csv("Arapat_Locations.csv")
+r <- raster("suitability_now.tif")
+r_lgm <- raster("suitability_lgm.asc")
+```
+
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+
+# Calculating the sex ratio at each site (Q1)
+
+samples %>%
+  group_by(Site) %>%
+  summarise(
+    Male_count = sum(Sex == "Male"),
+    Female_count = sum(Sex == "Female")) %>% 
+  mutate(MFratio = Male_count / Female_count) %>% 
+  mutate(Site_Num = as.integer(str_remove(Site, "Site "))) -> MFratio_by_site
+
+# Plotting the sex ratio at each site (Q1)
+
+MFratio_by_site %>% 
+  ggplot(aes(x = as.factor(Site_Num),
+           y = MFratio))+
+  geom_col(fill = "blue")+
+  labs(x = "Site",
+       y = "Sex Ratio",
+       title = "Sex ratio by sampled population (male to female)")+
+  theme_minimal() -> Q1_col
+
+# Performing a Chi-squared test to determine whether there is any difference in sex ratio between the sites (Q1) 
+
+MFratio_table <- table(samples$Site, samples$Sex)
+chisq_test <- chisq.test(MFratio_table)
+
+# Creating a shape file of the site location coordinates and converting the raster with current habitat suitability to a data frame (Q3)
+
+locations %>%  
+  st_as_sf(coords = c("Longitude","Latitude"), crs ="4326") -> locations_sf
+
+r %>%
+  as.data.frame(xy = TRUE) -> r.df
+
+r.df %>% 
+  rename(habitat_suitability = suitability_now) -> r.df
+
+# Extract the current habitat suitability from the raster, match it to the locations of each site, and then combine it with the observational data from each site including sex ratio (Q3) 
+
+suitability_now <- raster::extract(r, locations[, c("Longitude", "Latitude")])
+
+locations$habitat_suitability <- suitability_now
+
+MFratio_v_suitability <- left_join(MFratio_by_site,
+                          locations,
+                          by = c("Site"))
+
+# Removing Site 21 which has NA value (Q3)
+
+MFratio_v_suitability %>%
+  filter(!is.na(habitat_suitability)) -> MFratio_v_suitability
+
+# Checking normality of the response variable (Q3)
+
+shapiro.test(MFratio_v_suitability$MFratio) -> MFratio_shapiro
+
+# Checking normality of the predictor variable (Q3)
+
+shapiro.test(MFratio_v_suitability$habitat_suitability) -> suitability_shapiro
+
+# Performing a linear regression and summarizing the results (Q3)
+
+suitability_lm <- lm(MFratio ~ habitat_suitability, data = MFratio_v_suitability)
+
+model_summary <- summary(suitability_lm)
+p_value <- model_summary$coefficients[2,4]
+f_statistic_value <- model_summary$fstatistic[1]
+df1 <- model_summary$fstatistic[2]
+df2 <- model_summary$fstatistic[3]
+r_squared <- model_summary$r.squared
+slope <- coef(suitability_lm)["habitat_suitability"]
+
+# Visualization of linear regression (Q3)
+
+ggplot(MFratio_v_suitability, aes(x = habitat_suitability, y = MFratio)) +
+  geom_point(alpha = 0.6, color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+    labs(title = "Observed sex ratio (males to females) as a function of habitat suitability",
+    x = "Habitat Suitability",
+    y = "Observed Sex Ratio") +
+  theme_minimal() -> Q3_lm_plot
+
+# Calculating the mean of Phenotype A and Phenotype B to summarize by site (Q4)
+
+samples %>%
+  group_by(Site) %>% 
+  summarise(
+    Avg_PhenotypeA = mean(PhenotypeA),
+    Avg_PhenotypeB = mean(PhenotypeB)) %>% 
+  mutate(Site_Num = as.integer(str_remove(Site, "Site "))) %>% 
+  dplyr::select(-Site) -> Phenotype_by_site
+
+MFRatio_Pheno_site <- left_join(MFratio_v_suitability,
+                          Phenotype_by_site,
+                          by = c("Site_Num"))
+
+# Checking the normality of the new predictor variables (Q4)
+
+shapiro.test(MFRatio_Pheno_site$Avg_PhenotypeA) -> phenotypea_shapiro
+
+shapiro.test(MFRatio_Pheno_site$Avg_PhenotypeB) -> phenotypeb_shapiro
+
+# Performing additive regression models using the new predictor variables and summarizing the results (Q4)
+
+suit_phenoA_fit <- lm(MFratio ~ habitat_suitability + Avg_PhenotypeA, data = MFRatio_Pheno_site)
+phenoA_summary <- summary(suit_phenoA_fit)
+phenoA_pvalue <- phenoA_summary$coefficients[2,4]
+
+suit_phenoB_fit <- lm(MFratio ~ habitat_suitability + Avg_PhenotypeB, data = MFRatio_Pheno_site)
+phenoB_summary <- summary(suit_phenoB_fit)
+phenoB_pvalue <- phenoB_summary$coefficients[2,4]
+
+# Summarizing the results of the three linear regression models into an AIC table to review which model is working the best (Q4)
+
+aic_values <- c(
+  AIC(suitability_lm),
+  AIC(suit_phenoA_fit),
+  AIC(suit_phenoB_fit)
+)
+
+r2_values <- c(
+  summary(suitability_lm)$r.squared,
+  summary(suit_phenoA_fit)$r.squared,
+  summary(suit_phenoB_fit)$r.squared
+)
+
+p_values <- c(
+  tidy(suitability_lm)$p.value[2],
+  tidy(suit_phenoA_fit)$p.value[2],
+  tidy(suit_phenoB_fit)$p.value[2]
+)
+
+suit.models <- data.frame(
+  Model = c(
+    "Sex Ratio ~ Habitat Suitability", 
+    "Sex Ratio ~ Habitat Suitability + Phenotype A", 
+    "Sex Ratio ~ Habitat Suitability + Phenotype B"),
+  R2 = r2_values,
+  P = p_values,
+  AIC = aic_values,
+  DeltaAIC = aic_values - min(aic_values)
+)
+
+suit.models %>%
+  mutate(P = format( P, scientific=TRUE, digits=3)) %>%
+  kable(caption = "Table 1. Model parameters predicting sex ratio using multiple predictor variables",
+         digits = 3) %>%
+  kable_minimal() -> suit.models.table
+    
+# Extracting the LGM habitat suitability data from the raster and calculating the change in habitat suitability between present day and LGM (Q5)
+
+suitability_lgm <- raster::extract(r_lgm, MFratio_v_suitability[, c("Longitude", "Latitude")])
+MFratio_v_suitability$suitability_lgm <- suitability_lgm
+
+MFratio_v_suitability %>% 
+  mutate(habitat_change = habitat_suitability - suitability_lgm) -> MFratio_v_suitability
+
+MFratio_v_suitability %>% 
+  ggplot(aes(x = as.factor(Site_Num),
+         y = habitat_change,
+         fill = habitat_change))+
+  geom_col()+
+  labs(x = "Site",
+       y = "Change",
+       title = "Change in habitat suitability, Last Glacial Maximum to present day",
+       fill = "Habitat Suitability")+
+  scale_fill_gradient(low = "blue",
+                      high = "orange") -> Q5_col
+
+# Isolating the LGM habitat suitability data by site (Q6)
+
+MFratio_v_suitability %>% 
+  dplyr::select(Site, Site_Num, suitability_lgm) %>% 
+  rename(habitat_suitability = suitability_lgm) -> lgm_data
+
+# Using predict() function to run the regression model (Sex Ratio ~ Habitat Suitability) on the historical data (Q6)
+
+lgm_predictions_ci <- predict(suitability_lm, newdata = lgm_data, interval = "confidence")
+
+lgm_predictions <- predict(suitability_lm, newdata = lgm_data)
+
+MFratio_v_suitability$predict_lgm_ratio <- lgm_predictions
+
+MFratio_v_suitability %>% 
+  mutate(ratio_change = MFratio - predict_lgm_ratio) -> MFratio_v_suitability
+
+# Examining the residuals between observed and predicted (Q6) 
+
+MFratio_v_suitability$residuals <- MFratio_v_suitability$MFratio - MFratio_v_suitability$predict_lgm_ratio
+sd_residuals <- sd(MFratio_v_suitability$residuals)
+MFratio_v_suitability$std_residuals <- MFratio_v_suitability$residuals / sd_residuals
+
+MFratio_v_suitability %>% ggplot(aes(x = predict_lgm_ratio, y = residuals)) +
+  geom_point() +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+  labs(title = "Plot of residuals (sex ratio ~ habitat suitability, Last Glacial Maximum)", x = "Predicted Historical Sex Ratio", y = "Residuals") -> Q6_residuals
+  
+# Histogram showing distribution of the observed and historical sex ratios (Q6)
+
+MFratio_v_suitability  %>%
+  pivot_longer(cols = c(MFratio, predict_lgm_ratio),
+               names_to = "Type",
+               values_to = "SexRatio") -> MFratio_long
+
+MFratio_long %>% 
+  mutate(Type = recode(Type,
+                       MFratio = "Observed Present Day",
+                       predict_lgm_ratio = "Predicted LGM")) -> MFratio_long
+
+MFratio_long %>% 
+  ggplot(aes(x = SexRatio, fill = Type)) +
+  geom_histogram(bins = 30, position = "dodge", alpha = 0.6) +
+  scale_fill_manual(values = c("orange", "blue")) +
+  labs(
+    title = "Distribution of observed and predicted sex ratios",
+    x = "Sex Ratio",
+    y = "Frequency",
+    fill = "Sex Ratio"
+  ) +
+  theme_minimal() -> Q6_histogram
+
+# Table showing the change in habitat suitability and sex ratio at each site, LGM to present day (Q6)
+
+Q6.details <- data.frame(
+  Site = MFratio_v_suitability$Site_Num,
+  Habitat_Change = MFratio_v_suitability$habitat_change,
+  Sex_Ratio_Change = MFratio_v_suitability$ratio_change
+)
+
+Q6.details %>% 
+  arrange(desc(Habitat_Change)) -> Q6.details
+
+Q6.details %>%
+  kable(caption = "Table 2. Change in habitat suitability and sex ratio, Last Glacial Maximum to present day", 
+        digits = 3,
+        row.names = FALSE,
+        col.names = c("Site", "Habitat Suitability Change", "Sex Ratio Change")) %>%
+  kable_styling(full_width = FALSE, position = "center") %>% 
+  kable_minimal()-> Q6.table
+
+# Map of estimated historical habitat suitability (Q6)
+
+r_lgm %>%
+  as.data.frame(xy = TRUE) -> r_lgm.df
+
+r_lgm.df %>%
+  ggplot()  + 
+  geom_raster( aes( x = x, 
+                    y = y,
+                    fill = suitability_lgm) ) + 
+  coord_sf() +
+  scale_fill_gradient2( low = "darkolivegreen",
+                        mid = "yellow",
+                        high = "brown", 
+                        midpoint = 0.5,
+                        na.value = "white")+
+  theme_minimal()+
+  labs(x = "Longitude",
+       y = "Latitude",
+       fill = "Habitat Suitability",
+       title = "Estimated habitat suitability during Last Glacial Maximum")+
+  theme(panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      axis.text = element_text(color = "black"),    
+      axis.title = element_text(color = "black")) -> baja_ggplot_lgm
+
+# Map of current habitat suitability  (Q6)
+
+r.df %>%
+  ggplot()  + 
+  geom_raster( aes( x = x, 
+                    y = y,
+                    fill = habitat_suitability) ) + 
+  coord_sf() +
+  scale_fill_gradient2( low = "darkolivegreen",
+                        mid = "yellow",
+                        high = "brown", 
+                        midpoint = 0.5,
+                        na.value = "white")+
+  theme_minimal()+
+    labs(x = "Longitude",
+       y = "Latitude",
+       fill = "Habitat Suitability",
+       title = "Habitat suitability observed in present day")+
+  theme(panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      axis.text = element_text(color = "black"),    
+      axis.title = element_text(color = "black")) -> baja_ggplot
+
+# Map illustrating the degree of habitat suitability change at each site (Q6)
+
+MFratio_v_suitability %>% 
+  select(Site, habitat_change) -> change_data
+
+locations_sf %>%
+  left_join(change_data, by = "Site") -> locations_sf_change
+
+r.df %>%
+  ggplot()  + 
+  geom_raster( aes( x = x, 
+                    y = y,
+                    fill = habitat_suitability) ) + 
+  coord_sf() +
+  geom_sf(data = locations_sf_change,
+          aes(color = habitat_change))+
+  scale_fill_gradient2( low = "lightgray",
+                        mid = "lightgray",
+                        high = "lightgray", 
+                        midpoint = 0.5,
+                        na.value = "white")+
+  scale_color_gradient(low = "blue", high = "red")+
+  theme_minimal()+
+    labs(size = "Habitat Suitability Change",
+       x = "Longitude",
+       y = "Latitude",
+       color = "Change in Habitat Suitability\n(LGM to Present Day)",
+       title = "Change in habitat suitability from Last Glacial Maximum to present day")+
+  theme(panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      axis.text = element_text(color = "black"),    
+      axis.title = element_text(color = "black"))+
+  guides(fill = "none") -> habitat_change_ggplot
+
+# Map illustrating the degree of sex ratio change at each site (Q6)
+
+MFratio_v_suitability %>% 
+  select(Site, ratio_change) -> ratio_change_data
+
+locations_sf %>%
+  left_join(ratio_change_data, by = "Site") -> locations_sf_r_change
+
+r.df %>%
+  ggplot()  + 
+  geom_raster( aes( x = x, 
+                    y = y,
+                    fill = habitat_suitability) ) + 
+  coord_sf() +
+  geom_sf(data = locations_sf_r_change,
+          aes(color = ratio_change))+
+  scale_fill_gradient2( low = "lightgray",
+                        mid = "lightgray",
+                        high = "lightgray", 
+                        midpoint = 0.5,
+                        na.value = "white")+
+  scale_color_gradient(low = "blue", high = "red")+
+  theme_minimal()+
+    labs(size = "Sex Ratio Change",
+       x = "Longitude",
+       y = "Latitude",
+       color = "Change in Sex Ratio\n(LGM to Present Day)",
+       title = "Change in sex ratio from Last Glacial Maximum to present day")+
+  theme(panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      axis.text = element_text(color = "black"),    
+      axis.title = element_text(color = "black"))+
+  guides(fill = "none") -> ratio_change_ggplot
+
+
+```
+
+
+## Methods
+
+### Data collection and variables
+
+To gather the data of males and females present, five plants at 31 sampling locations were randomly selected and the number of beetles of each sex counted on each plant.  Additional quantitative traits of Phenotype A and Phenotype B were also recorded for each beetle.  This data was used to calculate the total sex ratio at each site.
+
+Present day habitat suitability at each site was determined by an index developed through Niche Modeling using observed biological and climatic conditions.  Historical habitat suitability was estimated using the same Niche Modeling method combined with reconstructed climate data from the Last Glacial Maximum (~20,000 years ago).  
+
+The variables examined were sex ratio, Phenotype A, Phenotype B, observed present day habitat suitability, and estimated historical habitat suitability at each of 31 sites.
+
+### Statistical tests performed
+
+The sex ratio at each site was calculated by summarizing the number of males and number of females at each site, then dividing the number of males by the number of females.  Each plant was considered replicated within each site in order to achieve this calculation.  A Pearson’s chi-squared test was performed to test the null hypothesis that there is no difference between the sex ratios at each site.  The sex ratio at each site was then reviewed to determine which sites have sex ratios that deviate from equal proportions of males and females.
+
+To create a model describing the functional relationship between habitat suitability and sex ratio I first extracted the habitat suitability index from the raster file and matched that index to each of the sampled populations (sites).  During this process, Site 21 returned a habitat suitability value of NA, so it was excluded from the data set prior to further analysis.  The response variable (sex ratio) and predictor variable (habitat suitability) were examined for normality by visually assessing a normal Q-Q plot and performing a Shapiro-Wilk normality test.  
+
+A linear regression model (sex ratio ~ habitat suitability) was then fitted to the data.  Four diagnostic plots were examined to assess normality of residuals, any overly influential data points, linearity, and homoscedasticity.  
+
+Two additional predictor variables (phenotype A and phenotype B) were added to the model to determine if they improved the functional relationship between sex ratio and habitat suitability.  The mean phenotype A and phenotype B were summarized at each site and then examined for normality by visually assessing a normal Q-Q plot and performing a Shapiro-Wilk normality test.  To assess the relative fit of the three different linear models, I calculated the Akaike Information Criterion (AIC) for each model.  I then computed the deltaAIC values by subtracting the AIC of the best-fitting model from the AIC of each other model. These values were used to compare the models' performance, with lower AIC and deltaAIC values indicating better fit. The results are summarized in Table 1.
+
+To determine whether - and how much - habitat suitability has changed at each site since the Last Glacial Maximum I first extracted the historical habitat suitability index from the historical raster file and matched the index to each of the sites.  The degree of change was calculated by subtracting the habitat suitability index from the Last Glacial Maximum from the habitat suitability index observed in present day.  The results are summarized in Table 2 and sorted in descending order from most positive change to most negative change.
+
+The function predict() was used to generate predicted sex ratio values at each site based on the habitat suitability index data from the Last Glacial Maximum.  This function used the coefficients from the linear regression model fitted to our present day observed data.  The residuals were plotted to assess the quality of the model fit.  A histogram plot was used to compare the distributions of the observed and predicted sex ratios.  Finally, the geographic distribution of the different habitat suitability indices and the corresponding observed and predicted sex ratios were plotted on maps of Baja California Sur.
+
+The statistical software R was used to perform all data wrangling and statistical analysis.
+
+
+
+## Results
+
+### Do the different sampled populations exhibit different sex ratios?
+A Pearson’s chi-squared test performed to determine whether any site (sampled population) had a male to female ratio different from any of the other male to female ratios produced a p-value of `r format(chisq_test$p.value, scientific = TRUE, digits = 4)` (df = `r chisq_test$parameter`).  As such, I reject the null hypothesis that there is no difference between the sites in male to female sex ratio.  Most of the sites have male to female sex ratios that differ from each of the other sites. 
+
+### Which sites have sex ratios that deviate from equal proportions of males and females?
+Plotting the sex ratio at each site reveals that only two sites - Site 23 and Site 25 - had observed sex ratios of equal proportion males and females.  
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+Q1_col
+```
+
+### Is there a functional relationship between the habitat suitability at the sampling locations and the sex ratio?
+The results of a Shapiro-Wilk normality test of the response variable sex ratio (p = `r format(MFratio_shapiro$p.value, scientific = TRUE, digits = 4)`) showed this data is consistent with a normal distribution.  The Q-Q plot of the response variable data also showed this data as relatively normal: nearly all the data points follow the reference line.  
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+qqnorm(MFratio_v_suitability$MFratio, main = "Normal Q-Q Plot: Sex Ratio (Response Variable)")
+qqline(MFratio_v_suitability$MFratio, col="red")
+```
+
+The results of a Shapiro-Wilk normality test of the predictor variable habitat suitability (p = `r format(suitability_shapiro$p.value, scientific = TRUE, digits = 4)`) showed this data to be of a normal distribution, as well.  However, the Q-Q plot of the predictor variable shows skewing along the right half of the reference line.  While the Shapiro-Wilk test gave a significant result indicating normality, these results should be viewed with caution given the skew of the Q-Q plot for this predictor variable.
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+qqnorm(MFratio_v_suitability$habitat_suitability, main = "Normal Q-Q Plot: Habitat Suitability Present Day (Predictor Variable)")
+qqline(MFratio_v_suitability$habitat_suitability, col="red")
+```
+
+The null hypothesis for the linear regression model (sex ratio ~ habitat suitability) was that there is no functional relationship between habitat suitability and sex ratio.  The alternative hypothesis was that there is a functional relationship between habitat suitability and sex ratio.  The results of the linear regression model (p = `r format(p_value, scientific = TRUE, digits = 4)`, F = `r format(f_statistic_value, digits = 4)`, df = `r df1` and `r df2`) indicate there is a statistically significant functional relationship between habitat suitability and sex ratio and as such, I reject the null hypothesis.  The results of the model are that habitat suitability plays a moderate role in explaining the variability in sex ratio, about 15% (R^2^ = `r format(r_squared, digits = 4)`).  The slope of the model (slope = `r format(slope, digits = 4)`) indicates that as habitat suitability at a site increases, the male to female ratio at that site decreases.  This means there are more females than males at sites with higher habitat suitability indices and this ratio increases as the habitat becomes more and more suitable.  
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+Q3_lm_plot
+```
+
+A diagnostic Residuals vs Fitted plot shows that the model residuals are mostly linear in nature.  They follow a somewhat horizontal line across the plot.  The normal Q-Q plot of the model residuals shows the residuals are fairly normal.  They fall along the reference line with one outlier - Site 10 - pulling away from the reference line in the right half of the plot.  A diagnostic Scale-Location plot indicates there is likely homoscedasticity among the residuals in this regression model.  The points roughly follow a horizontal line across the plot.  A diagnostic Residuals vs Leverage plot did not identify any overly influential points in our dataset falling outside of the Cook’s distance (0.05) boundaries, though data from Sites 10, 28, and 27 are flagged by the plot as being potential outliers.
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+plot(suitability_lm)
+```
+
+### Does the inclusion of Phenotype A or Phenotype B as predictor variables improve the functional relationship over habitat suitability alone?
+Prior to adding the new predictor variables of Phenotype A and Phenotype B, the variables were first tested for normality using Q-Q plots and Shaprio-Wilk tests.  The Shapiro-Wilk test for the predictor variable Phenotype A gave a result of p = `r format(phenotypea_shapiro$p.value, scientific = TRUE, digits = 4)`.  This p-value indicates the Phenotype A predictor variable is not of a normal distribution.  Therefor, any results from a regression model including this predictor variable should be viewed with caution.  
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+qqnorm(MFRatio_Pheno_site$Avg_PhenotypeA, main = "Normal Q-Q Plot: Mean Phenotype A (Predictor Variable)")
+qqline(MFRatio_Pheno_site$Avg_PhenotypeA, col="red")
+```
+
+The Shapiro-Wilk test for the predictor variable Phenotype B gave a result of p = `r format(phenotypeb_shapiro$p.value, scientific = TRUE, digits = 4)` which indicates this predictor variable  does have a normal distribution.  This result aligned visually with the Q-Q plot of this predictor variable.
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+qqnorm(MFRatio_Pheno_site$Avg_PhenotypeB, main = "Normal Q-Q Plot: Mean Phenotype B (Predictor Variable)")
+qqline(MFRatio_Pheno_site$Avg_PhenotypeB, col="red")
+```
+
+The linear regression models using habitat suitability, Phenotype A and Phenotype B as predictor variables were compared to the linear regression model using habitat suitability alone as the predictor variable.  Neither of the additional predictor variables strengthened the model when compared to habitat suitability alone.  The model with habitat suitability as the single predictor variable produced a p-value of `r format(p_value, scientific = TRUE, digits = 4)` and an AIC of `r format(AIC(suitability_lm), scientific = FALSE, digits = 4)`.  The p-values for the other models (p =`r format(phenoA_pvalue, scientific = TRUE, digits = 4)` for Phenotype A and p = `r format(phenoB_pvalue, scientific = TRUE, digits = 4)` for Phenotype B) were significant but produced higher AIC values.  As such, the model with habitat suitability as a single predictor variable is the top model.
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+suit.models.table
+```
+
+### Has the habitat suitability at each location changed from the Last Glacial Maximum to the present day?
+
+The habitat suitability at each location has changed from the Last Glacial Maximum to the present day.  Slightly more sites (17 of 30) experienced an increase rather than a decrease (13 of 30) in habitat suitability between the Last Glacial Maximum and present day.  However, the decreases in habitat suitability - where they did occur - were more extreme.
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+Q5_col
+```
+
+### What are the predicted historical sex ratios at each of the locations based on the habitat suitability indices from the Last Glacial Maximum?  Are there any trends that may be due to differences in climate?
+The top model from our AIC table (sex ratio ~ habitat suitability) was used to predict the historical sex ratio at each site based on the estimated historical habitat suitability from the Last Glacial Maximum.  A plot of the residuals from this model used on the historical data showed the residuals mostly evenly distributed above and below the zero residual line.  This indicates it is likely the model is not consistently over- or under-predicting the response variable of historical sex ratio.  
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+Q6_residuals
+```
+
+
+The maximum predicted sex ratio (male to female) was `r format(max(MFratio_v_suitability$predict_lgm_ratio), digits = 4)` and the minimum was `r format(min(MFratio_v_suitability$predict_lgm_ratio), digits = 4)`.  This is a smaller range of sex ratio values than in our observed, present day data.
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+Q6_histogram
+```
+
+The habitat suitability at each site experienced change - some positive, some negative - between the Last Glacial Maximum and present day.  
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+Q6.table
+```
+
+Maps of the overall habitat suitability in this region at the two time points (historical and present day) reveal these subtle changes in habitat suitability over time.  The highly-suitable habitats across the entire region appear to shrink slightly between the Last Glacial Maximum and the present day, implying *Araptus attenuatus* may have had greater options for habitats in the past.  
+
+The sites showing the biggest *decreases* in habitat suitability since the Last Glacial Maximum are positioned along the coastlines - though not all coastline-adjacent sites showed decreases in habitat suitability.  These coastal regions of the peninsula would have experienced a significant change in sea level over this time period.  Globally during the Last Glacial Maximum sea levels were over 100 meters lower than they are today and overall the climate was much colder and drier.  
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+baja_ggplot_lgm
+baja_ggplot
+habitat_change_ggplot
+```
+
+Many sites that experienced an *increase* in habitat suitability from past to present show a corresponding *decrease* in the male to female sex ratio.  This is the effect anticipated from our linear regression model performed on the observed present day data.  The site with the biggest increase in habitat suitability from the Last Glacial Maximum to present day - Site 9 - also shows the biggest decrease in male to female sex ratio (meaning the site showed more females than males in the present day compared to historically).  The overall trend aligns with the expected result of our model however, it is not perfectly seen across all sites.
+
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+ratio_change_ggplot
+```
