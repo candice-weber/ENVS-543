@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Candice Weber">
+<meta name="dcterms.date" content="2024-12-16">
+
+<title>Final Exam for ENVS 543 Fall 2024</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="C.Weber_Final_Exam_v2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="C.Weber_Final_Exam_v2_files/libs/quarto-html/quarto.js"></script>
+<script src="C.Weber_Final_Exam_v2_files/libs/quarto-html/popper.min.js"></script>
+<script src="C.Weber_Final_Exam_v2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="C.Weber_Final_Exam_v2_files/libs/quarto-html/anchor.min.js"></script>
+<link href="C.Weber_Final_Exam_v2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="C.Weber_Final_Exam_v2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="C.Weber_Final_Exam_v2_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="C.Weber_Final_Exam_v2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="C.Weber_Final_Exam_v2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="C.Weber_Final_Exam_v2_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="C.Weber_Final_Exam_v2_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#methods" id="toc-methods" class="nav-link active" data-scroll-target="#methods">Methods</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Final Exam for ENVS 543 Fall 2024</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Candice Weber </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 16, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    This study seeks to determine the extent to which changing climate may have impacted sex ratio divergence among locations in the Sonora Desert bark beetle, Araptus attenuatus. Habitat suitability - both observed present day and estimated for the Last Glacial Maximum - is considered at a number of different sites.
+  </div>
+</div>
+
+
+</header>
+
+
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="data-collection-and-variables" class="level3">
+<h3 class="anchored" data-anchor-id="data-collection-and-variables">Data collection and variables</h3>
+<p>To gather the data of males and females present, five plants at 31 sampling locations were randomly selected and the number of beetles of each sex counted on each plant. Additional quantitative traits of Phenotype A and Phenotype B were also recorded for each beetle. This data was used to calculate the total sex ratio at each site.</p>
+<p>Present day habitat suitability at each site was determined by an index developed through Niche Modeling using observed biological and climatic conditions. Historical habitat suitability was estimated using the same Niche Modeling method combined with reconstructed climate data from the Last Glacial Maximum (~20,000 years ago).</p>
+<p>The variables examined were sex ratio, Phenotype A, Phenotype B, observed present day habitat suitability, and estimated historical habitat suitability at each of 31 sites.</p>
+</section>
+<section id="statistical-tests-performed" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-tests-performed">Statistical tests performed</h3>
+<p>The sex ratio at each site was calculated by summarizing the number of males and number of females at each site, then dividing the number of males by the number of females. Each plant was considered replicated within each site in order to achieve this calculation. A Pearson’s chi-squared test was performed to test the null hypothesis that there is no difference between the sex ratios at each site. The sex ratio at each site was then reviewed to determine which sites have sex ratios that deviate from equal proportions of males and females.</p>
+<p>To create a model describing the functional relationship between habitat suitability and sex ratio I first extracted the habitat suitability index from the raster file and matched that index to each of the sampled populations (sites). During this process, Site 21 returned a habitat suitability value of NA, so it was excluded from the data set prior to further analysis. The response variable (sex ratio) and predictor variable (habitat suitability) were examined for normality by visually assessing a normal Q-Q plot and performing a Shapiro-Wilk normality test.<br>
+A linear regression model (sex ratio ~ habitat suitability) was then fitted to the data. Four diagnostic plots were examined to assess normality of residuals, any overly influential data points, linearity, and homoscedasticity.</p>
+<p>Two additional predictor variables (phenotype A and phenotype B) were added to the model to determine if they improved the functional relationship between sex ratio and habitat suitability. The mean phenotype A and phenotype B were summarized at each site and then examined for normality by visually assessing a normal Q-Q plot and performing a Shapiro-Wilk normality test. To assess the relative fit of the three different linear models, I calculated the Akaike Information Criterion (AIC) for each model. I then computed the deltaAIC values by subtracting the AIC of the best-fitting model from the AIC of each other model. These values were used to compare the models’ performance, with lower AIC and deltaAIC values indicating better fit. The results are summarized in Table 1.</p>
+<p>To determine whether - and how much - habitat suitability has changed at each site since the Last Glacial Maximum I first extracted the historical habitat suitability index from the historical raster file and matched the index to each of the sites. The degree of change was calculated by subtracting the habitat suitability index from the Last Glacial Maximum from the habitat suitability index observed in present day. The results are summarized in Table 2 and sorted in descending order from most positive change to most negative change.</p>
+<p>The function predict() was used to generate predicted sex ratio values at each site based on the habitat suitability index data from the Last Glacial Maximum. This function used the coefficients from the linear regression model fitted to our present day observed data. The residuals were plotted to assess the quality of the model fit. A histogram plot was used to compare the distributions of the observed and predicted sex ratios. Finally, the geographic distribution of the different habitat suitability indices and the corresponding observed and predicted sex ratios were plotted on maps of Baja California Sur.</p>
+<p>The statistical software R was used to perform all data wrangling and statistical analysis.</p>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="do-the-different-sampled-populations-exhibit-different-sex-ratios" class="level3">
+<h3 class="anchored" data-anchor-id="do-the-different-sampled-populations-exhibit-different-sex-ratios">Do the different sampled populations exhibit different sex ratios?</h3>
+<p>A Pearson’s chi-squared test performed to determine whether any site (sampled population) had a male to female ratio different from any of the other male to female ratios produced a p-value of 7.968e-05 (df = 30). As such, I reject the null hypothesis that there is no difference between the sites in male to female sex ratio. Most of the sites have male to female sex ratios that differ from each of the other sites.</p>
+</section>
+<section id="which-sites-have-sex-ratios-that-deviate-from-equal-proportions-of-males-and-females" class="level3">
+<h3 class="anchored" data-anchor-id="which-sites-have-sex-ratios-that-deviate-from-equal-proportions-of-males-and-females">Which sites have sex ratios that deviate from equal proportions of males and females?</h3>
+<p>Plotting the sex ratio at each site reveals that only two sites - Site 23 and Site 25 - had observed sex ratios of equal proportion males and females.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="is-there-a-functional-relationship-between-the-habitat-suitability-at-the-sampling-locations-and-the-sex-ratio" class="level3">
+<h3 class="anchored" data-anchor-id="is-there-a-functional-relationship-between-the-habitat-suitability-at-the-sampling-locations-and-the-sex-ratio">Is there a functional relationship between the habitat suitability at the sampling locations and the sex ratio?</h3>
+<p>The results of a Shapiro-Wilk normality test of the response variable sex ratio (p = 9.579e-02) showed this data is consistent with a normal distribution. The Q-Q plot of the response variable data also showed this data as relatively normal: nearly all the data points follow the reference line.</p>
+<p>The results of a Shapiro-Wilk normality test of the predictor variable habitat suitability (p = 1.495e-01) showed this data to be of a normal distribution, as well. However, the Q-Q plot of the predictor variable shows skewing along the right half of the reference line. While the Shapiro-Wilk test gave a significant result indicating normality, these results should be viewed with caution given the skew of the Q-Q plot for this predictor variable.</p>
+<p>The null hypothesis for the linear regression model (sex ratio ~ habitat suitability) was that there is no functional relationship between habitat suitability and sex ratio. The alternative hypothesis was that there is a functional relationship between habitat suitability and sex ratio. The results of the linear regression model (p = 3.332e-02, F = 5.011, df = 1 and 28) indicate there is a statistically significant functional relationship between habitat suitability and sex ratio and as such, I reject the null hypothesis. The results of the model are that habitat suitability plays a moderate role in explaining the variability in sex ratio, about 15% (R<sup>2</sup> = 0.1518). The slope of the model (slope = -0.6173) indicates that as habitat suitability at a site increases, the male to female ratio at that site decreases. This means there are more females than males at sites with higher habitat suitability indices and this ratio increases as the habitat becomes more and more suitable.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A diagnostic Residuals vs Fitted plot shows that the model residuals are mostly linear in nature. They follow a somewhat horizontal line across the plot. The normal Q-Q plot of the model residuals shows the residuals are fairly normal. They fall along the reference line with one outlier - Site 10 - pulling away from the reference line in the right half of the plot. A diagnostic Scale-Location plot indicates there is likely homoscedasticity among the residuals in this regression model. The points roughly follow a horizontal line across the plot. A diagnostic Residuals vs Leverage plot did not identify any overly influential points in our data set falling outside of the Cook’s distance (0.05) boundaries, though data from Sites 10, 28, and 27 are flagged by the plot as being potential outliers.</p>
+</section>
+<section id="does-the-inclusion-of-phenotype-a-or-phenotype-b-as-predictor-variables-improve-the-functional-relationship-over-habitat-suitability-alone" class="level3">
+<h3 class="anchored" data-anchor-id="does-the-inclusion-of-phenotype-a-or-phenotype-b-as-predictor-variables-improve-the-functional-relationship-over-habitat-suitability-alone">Does the inclusion of Phenotype A or Phenotype B as predictor variables improve the functional relationship over habitat suitability alone?</h3>
+<p>Prior to adding the new predictor variables of Phenotype A and Phenotype B, the variables were first tested for normality using Q-Q plots and Shaprio-Wilk tests. The Shapiro-Wilk test for the predictor variable Phenotype A gave a result of p = 9.191e-03. This p-value indicates the Phenotype A predictor variable is not of a normal distribution. Therefor, any results from a regression model including this predictor variable should be viewed with caution.</p>
+<p>The Shapiro-Wilk test for the predictor variable Phenotype B gave a result of p = 2.505e-01 which indicates this predictor variable does have a normal distribution. This result aligned visually with the Q-Q plot of this predictor variable.</p>
+<p>The linear regression models using habitat suitability, Phenotype A and Phenotype B as predictor variables were compared to the linear regression model using habitat suitability alone as the predictor variable. Neither of the additional predictor variables strengthened the model when compared to habitat suitability alone. The model with habitat suitability as the single predictor variable produced a p-value of 3.332e-02 and an AIC of 23.28. The p-values for the other models (p =3.655e-02 for Phenotype A and p = 3.069e-02 for Phenotype B) were significant but produced higher AIC values. As such, the model with habitat suitability as a single predictor variable is the top model.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="lightable-minimal caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table 1. Model parameters predicting sex ratio using multiple predictor variables</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Model</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">R2</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">P</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">AIC</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">DeltaAIC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Sex Ratio ~ Habitat Suitability</td>
+<td style="text-align: right;">0.152</td>
+<td style="text-align: left;">3.33e-02</td>
+<td style="text-align: right;">23.277</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sex Ratio ~ Habitat Suitability + Phenotype A</td>
+<td style="text-align: right;">0.152</td>
+<td style="text-align: left;">3.65e-02</td>
+<td style="text-align: right;">25.263</td>
+<td style="text-align: right;">1.986</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sex Ratio ~ Habitat Suitability + Phenotype B</td>
+<td style="text-align: right;">0.181</td>
+<td style="text-align: left;">3.07e-02</td>
+<td style="text-align: right;">24.242</td>
+<td style="text-align: right;">0.965</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="has-the-habitat-suitability-at-each-location-changed-from-the-last-glacial-maximum-to-the-present-day" class="level3">
+<h3 class="anchored" data-anchor-id="has-the-habitat-suitability-at-each-location-changed-from-the-last-glacial-maximum-to-the-present-day">Has the habitat suitability at each location changed from the Last Glacial Maximum to the present day?</h3>
+<p>The habitat suitability at each location has changed from the Last Glacial Maximum to the present day. Slightly more sites (17 of 30) experienced an increase rather than a decrease (13 of 30) in habitat suitability between the Last Glacial Maximum and present day. However, the decreases in habitat suitability - where they did occur - were more extreme.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="what-are-the-predicted-historical-sex-ratios-at-each-of-the-locations-based-on-the-habitat-suitability-indices-from-the-last-glacial-maximum-are-there-any-trends-that-may-be-due-to-differences-in-climate" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-the-predicted-historical-sex-ratios-at-each-of-the-locations-based-on-the-habitat-suitability-indices-from-the-last-glacial-maximum-are-there-any-trends-that-may-be-due-to-differences-in-climate">What are the predicted historical sex ratios at each of the locations based on the habitat suitability indices from the Last Glacial Maximum? Are there any trends that may be due to differences in climate?</h3>
+<p>The top model from our AIC table (sex ratio ~ habitat suitability) was used to predict the historical sex ratio at each site based on the estimated historical habitat suitability from the Last Glacial Maximum. A plot of the residuals from this model used on the historical data showed the residuals mostly evenly distributed above and below the zero residual line. This indicates it is likely the model is not consistently over- or under-predicting the response variable of historical sex ratio.</p>
+<p>The maximum predicted sex ratio (male to female) was 1.37 and the minimum was 0.8268. This is a smaller range of sex ratio values than in our observed, present day data.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The habitat suitability at each site experienced change - some positive, some negative - between the Last Glacial Maximum and present day.</p>
+<p>Maps of the overall habitat suitability in this region at the two time points (historical and present day) reveal these subtle changes in habitat suitability over time. The highly-suitable habitats across the entire region appear to shrink slightly between the Last Glacial Maximum and the present day, implying <em>Araptus attenuatus</em> may have had greater options for habitats in the past.</p>
+<p>The sites showing the biggest <em>decreases</em> in habitat suitability since the Last Glacial Maximum are positioned along the coastlines - though not all coastline-adjacent sites showed decreases in habitat suitability. These coastal regions of the peninsula would have experienced a significant change in sea level over this time period. Globally during the Last Glacial Maximum sea levels were over 100 meters lower than they are today and overall the climate was much colder and drier.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-8-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Many sites that experienced an <em>increase</em> in habitat suitability from past to present show a corresponding <em>decrease</em> in the male to female sex ratio. This is the effect anticipated from our linear regression model performed on the observed present day data. The site with the biggest increase in habitat suitability from the Last Glacial Maximum to present day - Site 9 - also shows the biggest decrease in male to female sex ratio (meaning the site showed more females than males in the present day compared to historically). The overall trend aligns with the expected result of our model however, it is not perfectly seen across all sites.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-10-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-10-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-10-4.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-10-5.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-10-6.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-10-7.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-10-8.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="C.Weber_Final_Exam_v2_files/figure-html/unnamed-chunk-10-9.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<table class="table lightable-minimal caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table 2. Change in habitat suitability and sex ratio, Last Glacial Maximum to present day</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Site</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Habitat Suitability Change</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Sex Ratio Change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0.169</td>
+<td style="text-align: right;">-0.597</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0.106</td>
+<td style="text-align: right;">-0.124</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">0.081</td>
+<td style="text-align: right;">-0.035</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">0.076</td>
+<td style="text-align: right;">-0.244</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">0.072</td>
+<td style="text-align: right;">0.381</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.072</td>
+<td style="text-align: right;">-0.202</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.062</td>
+<td style="text-align: right;">-0.413</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0.051</td>
+<td style="text-align: right;">-0.028</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">0.051</td>
+<td style="text-align: right;">-0.437</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">0.037</td>
+<td style="text-align: right;">-0.018</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">0.034</td>
+<td style="text-align: right;">0.126</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">0.029</td>
+<td style="text-align: right;">-0.154</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">0.474</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">0.011</td>
+<td style="text-align: right;">-0.107</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0.005</td>
+<td style="text-align: right;">0.027</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.004</td>
+<td style="text-align: right;">0.355</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.130</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-0.001</td>
+<td style="text-align: right;">0.152</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-0.033</td>
+<td style="text-align: right;">0.395</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">-0.040</td>
+<td style="text-align: right;">0.392</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-0.042</td>
+<td style="text-align: right;">0.018</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">-0.067</td>
+<td style="text-align: right;">-0.313</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">-0.073</td>
+<td style="text-align: right;">-0.286</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">-0.077</td>
+<td style="text-align: right;">-0.184</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">-0.081</td>
+<td style="text-align: right;">-0.231</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">-0.147</td>
+<td style="text-align: right;">0.426</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">-0.238</td>
+<td style="text-align: right;">-0.368</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">-0.301</td>
+<td style="text-align: right;">0.217</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">-0.302</td>
+<td style="text-align: right;">1.098</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">-0.309</td>
+<td style="text-align: right;">0.061</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
